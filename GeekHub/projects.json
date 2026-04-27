@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "Title": "QuoteTile",
+      "Subtitle": "Seek inspiration from quotes",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/QuoteTileMain/main/GeekHub/Images/q.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/QuoteTileMain/main/GeekHub/Images/quote.png",
+      "AccentColor": "#0D47A1",
+      "Version": "2.1.3.0",
+      "Description": "QuoteTile is a simple app that shows inspiring quotes. Refresh quotes anytime, copy quotes to clipboard with one click, and share quotes anywhere."
+    },
+    {
+      "Title": "GDC Media Player",
+      "Subtitle": "Vibe-cooling media player",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/QuoteTileMain/main/GeekHub/Images/mp3.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/QuoteTileMain/main/GeekHub/Images/media.png",
+      "AccentColor": "#561269",
+      "Version": "1.3.0.0",
+      "Description": "A lightweight and modern audio player designed for music lovers. Clean UI, smooth playback, and efficient performance."
+    },
+    {
+      "Title": "GDC Highlights",
+      "Subtitle": "Latest news from GDC",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/QuoteTileMain/main/GeekHub/Images/feed.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/QuoteTileMain/main/GeekHub/Images/gdch.png",
+      "AccentColor": "#0081CC",
+      "Version": "1.2.1.1",
+      "Description": "Stay updated with the latest GDC news, releases, and community highlights in one place."
+    },
+    {
+      "Title": "ChrisRLillo Music",
+      "Subtitle": "Chilean music in its peak",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/QuoteTileMain/main/GeekHub/Images/chris.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/QuoteTileMain/main/GeekHub/Images/rlillo.png",
+      "AccentColor": "#000000",
+      "Version": "1.2.1.0",
+      "Description": "Discover music, updates, and exclusive content from ChrisRLillo."
+    }
+  ]
+}
