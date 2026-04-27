@@ -107,7 +107,7 @@ namespace GeekHub
                     // =========================
                     GridProjects.Clear();
 
-                    foreach (var p in Projects.Take(4))
+                    foreach (var p in Projects.Take(6))
                     {
                         GridProjects.Add(p);
                     }

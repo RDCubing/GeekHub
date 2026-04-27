@@ -116,7 +116,19 @@ namespace GeekHub
             var picker = new Windows.Storage.Pickers.FileSavePicker();
             picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.Downloads;
             picker.SuggestedFileName = project.Title;
-            picker.FileTypeChoices.Add("App Package", new List<string> { ".appx" });
+            var uri = new Uri(project.DownloadUrl);
+            string extension = System.IO.Path.GetExtension(uri.AbsolutePath);
+
+            // fallback if no extension
+            if (string.IsNullOrEmpty(extension))
+                extension = ".bin";
+
+            // clean extension (just in case)
+            extension = extension.ToLower();
+
+            // set filename + type
+            picker.SuggestedFileName = project.Title;
+            picker.FileTypeChoices.Add("File", new List<string> { extension });
 
             var file = await picker.PickSaveFileAsync();
             if (file == null) return;

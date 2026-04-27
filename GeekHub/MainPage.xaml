@@ -67,7 +67,28 @@
 
     </Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+
+                <GradientStop Color="#661E3C72" Offset="0.0"/>
+                <!-- deep blue (transparent) -->
+                <GradientStop Color="#662A5298" Offset="0.25"/>
+                <!-- blue -->
+                <GradientStop Color="#666A11CB" Offset="0.5"/>
+                <!-- purple -->
+                <GradientStop Color="#662575FC" Offset="0.75"/>
+                <!-- bright blue -->
+                <GradientStop Color="#6600C6FF" Offset="1.0"/>
+                <!-- cyan -->
+
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -95,7 +116,56 @@
                     <TranslateTransform x:Name="MainPanelTransform" X="200"/>
                 </StackPanel.RenderTransform>
                 <!-- Welcome Section -->
-                <Grid Width="425" Margin="50,0,40,0">
+                <Grid Width="500" Margin="50,0,40,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="82"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Title -->
+                    <TextBlock Grid.Row="0"
+               Text="Suggested"
+               FontSize="36"
+               FontWeight="Light"
+               Foreground="White"
+               Margin="0,0,0,20"
+               TextWrapping="Wrap" VerticalAlignment="Center"/>
+                    <!-- Row 1 Border -->
+                    <Border Grid.Row="1"
+        BorderThickness="2"
+        BorderBrush="#66FFFFFF"
+        Padding="12"
+        Background="Transparent">
+
+                        <StackPanel>
+
+                            <!-- Title inside border -->
+                            <TextBlock Text="Welcome to GeekHub!"
+           FontSize="28"
+           FontWeight="Light"
+           Foreground="White"
+           TextWrapping="Wrap"
+           Margin="0,0,0,12"
+           LineHeight="32"/>
+
+                            <!-- Content inside border -->
+                            <TextBlock Text="Welcome to GeekHub, your central place for exploring projects, updates, and creative ideas all in one space. Here you can browse the latest builds, read fresh updates, and discover what's being worked on in real time. GeekHub is designed to keep everything organized and easy to access, so you can quickly jump between projects and stay up to date with new releases and features."
+           FontSize="16"
+           FontWeight="Light"
+           Foreground="#CCFFFFFF"
+           TextWrapping="Wrap"
+           LineHeight="22"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+
+                </Grid>
+                <!-- Welcome Section -->
+                <Grid Width="600" Margin="50,0,40,0">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
