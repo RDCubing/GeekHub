@@ -21,6 +21,8 @@ using Windows.UI;
 using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Diagnostics;
+using Windows.Data.Xml.Dom;
+using Windows.UI.Notifications;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -37,6 +39,9 @@ namespace GeekHub
         public ObservableCollection<Project> Projects { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
         private FeedItem _currentFeedItem;
+        private DispatcherTimer _tileTimer;
+        private List<Project> _tileProjects;
+        private int _tileIndex = 0;
 
         public FeedItem CurrentFeedItem
         {
@@ -89,7 +94,8 @@ namespace GeekHub
                             AccentBrush = new SolidColorBrush(HexToColor(p.AccentColor)),
 
                             DownloadUrl = p.DownloadUrl,
-                            SourceUrl = p.SourceUrl
+                            SourceUrl = p.SourceUrl,
+                            ImagePath = p.ImagePath
                         };
 
                         project.LocalImage = await DownloadImageAsync(p.ImagePath, imageFileName);
@@ -129,6 +135,138 @@ namespace GeekHub
             CheckStorage();
             LoadLatestFeed();
             await LoadProjectsAsync();
+            _tileProjects = Projects.ToList();
+            StartTileUpdates();
+        }
+
+        private void UpdateTile(Project project)
+        {
+            string img = project.ImagePath;
+
+            // =========================
+            // MEDIUM
+            // =========================
+            XmlDocument mediumTileXml =
+                TileUpdateManager.GetTemplateContent(
+                    TileTemplateType.TileSquare150x150PeekImageAndText04);
+
+            var mediumText = mediumTileXml.GetElementsByTagName("text");
+            if (mediumText.Length > 0)
+                mediumText[0].InnerText = project.Subtitle;
+
+            var mediumImage = mediumTileXml.GetElementsByTagName("image").Item(0);
+            if (mediumImage != null && !string.IsNullOrEmpty(img))
+            {
+                ((Windows.Data.Xml.Dom.XmlElement)mediumImage)
+                    .SetAttribute("src", img);
+            }
+
+
+            // =========================
+            // WIDE
+            // =========================
+            XmlDocument wideTileXml =
+                TileUpdateManager.GetTemplateContent(
+                    TileTemplateType.TileWide310x150SmallImageAndText02);
+
+            var wideImage = wideTileXml.GetElementsByTagName("image").Item(0);
+            if (wideImage != null && !string.IsNullOrEmpty(img))
+            {
+                ((Windows.Data.Xml.Dom.XmlElement)wideImage)
+                    .SetAttribute("src", img);
+            }
+
+            var wideText = wideTileXml.GetElementsByTagName("text");
+
+            if (wideText.Length > 0)
+                wideText[0].InnerText = project.Title;
+
+            if (wideText.Length > 1)
+                wideText[1].InnerText = project.Subtitle;
+
+            if (wideText.Length > 2)
+                wideText[2].InnerText = "GeekHub";
+
+
+            XmlDocument largeTileXml =
+    TileUpdateManager.GetTemplateContent(
+        TileTemplateType.TileSquare310x310SmallImageAndText01);
+
+            // IMAGE (top-left square)
+            var imageNode = largeTileXml.GetElementsByTagName("image").Item(0);
+            if (imageNode != null)
+            {
+                ((Windows.Data.Xml.Dom.XmlElement)imageNode)
+                    .SetAttribute("src", project.ImagePath);
+            }
+
+            // TEXTS
+            var textNodes = largeTileXml.GetElementsByTagName("text");
+
+            if (textNodes.Length > 0)
+                textNodes[0].InnerText = project.Title;       // header
+
+            if (textNodes.Length > 1)
+                textNodes[1].InnerText = project.Description; // wrapped text
+
+
+            // =========================
+            // COMBINE
+            // =========================
+            IXmlNode visualNode =
+                mediumTileXml.GetElementsByTagName("visual").Item(0);
+
+            visualNode.AppendChild(
+                mediumTileXml.ImportNode(
+                    wideTileXml.GetElementsByTagName("binding").Item(0),
+                    true));
+
+            visualNode.AppendChild(
+                mediumTileXml.ImportNode(
+                    largeTileXml.GetElementsByTagName("binding").Item(0),
+                    true));
+
+
+            // =========================
+            // SEND
+            // =========================
+            var tile = new TileNotification(mediumTileXml);
+            TileUpdateManager.CreateTileUpdaterForApplication().Update(tile);
+        }
+
+        private string GetImageUri(BitmapImage img)
+        {
+            return img?.UriSource?.ToString() ?? "";
+        }
+
+        private void StartTileUpdates()
+        {
+            _tileTimer = new DispatcherTimer();
+            _tileTimer.Interval = TimeSpan.FromSeconds(15);
+
+            _tileTimer.Tick += (s, e) =>
+            {
+                if (_tileProjects == null || _tileProjects.Count == 0)
+                    return;
+
+                var project = _tileProjects[_tileIndex];
+
+                UpdateTile(project);
+
+                _tileIndex++;
+                if (_tileIndex >= _tileProjects.Count)
+                    _tileIndex = 0;
+            };
+
+            // 🔥 RUN IMMEDIATELY FIRST
+            if (_tileProjects != null && _tileProjects.Count > 0)
+            {
+                _tileIndex = 0;
+                UpdateTile(_tileProjects[_tileIndex]);
+                _tileIndex = 1; // prepare next tick
+            }
+
+            _tileTimer.Start();
         }
 
         private async void CheckStorage()
@@ -326,6 +464,7 @@ namespace GeekHub
         public string Version { get; set; }
         public string DownloadUrl { get; set; }
         public string SourceUrl { get; set; }
+        public string ImagePath { get; set; }
     }
 
     public class ProjectDto
