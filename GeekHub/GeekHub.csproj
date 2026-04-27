@@ -162,8 +162,14 @@
     <Content Include="Assets\Wide310x150Logo.scale-180.png" />
     <Content Include="Assets\Wide310x150Logo.scale-80.png" />
     <Content Include="Images\feed.png" />
+    <Content Include="Images\1.png" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\4.png" />
     <Content Include="Images\gdch.png" />
     <Content Include="Images\chris.png" />
+    <Content Include="Images\ltswide.png" />
+    <Content Include="Images\lts.png" />
     <Content Include="Images\media.png" />
     <Content Include="Images\mp3.png" />
     <Content Include="Images\q.png" />
