@@ -42,6 +42,7 @@ namespace GeekHub
         private DispatcherTimer _tileTimer;
         private List<Project> _tileProjects;
         private int _tileIndex = 0;
+        public ObservableCollection<Project> GridProjects { get; set; }
 
         public FeedItem CurrentFeedItem
         {
@@ -59,6 +60,7 @@ namespace GeekHub
         {
             this.InitializeComponent();
             Projects = new ObservableCollection<Project>();
+            GridProjects = new ObservableCollection<Project>();
             // IMPORTANT: set DataContext
             this.DataContext = this;
         }
@@ -82,9 +84,6 @@ namespace GeekHub
 
                     foreach (var p in projectFeed.projects)
                     {
-                        var imageFileName = $"{p.Title}_icon.png";
-                        var detailFileName = $"{p.Title}_detail.png";
-
                         var project = new Project
                         {
                             Title = p.Title,
@@ -92,16 +91,25 @@ namespace GeekHub
                             Version = p.Version,
                             Description = p.Description,
                             AccentBrush = new SolidColorBrush(HexToColor(p.AccentColor)),
-
                             DownloadUrl = p.DownloadUrl,
                             SourceUrl = p.SourceUrl,
                             ImagePath = p.ImagePath
                         };
 
-                        project.LocalImage = await DownloadImageAsync(p.ImagePath, imageFileName);
-                        project.LocalDetailImage = await DownloadImageAsync(p.DetailImagePath, detailFileName);
+                        project.LocalImage = await DownloadImageAsync(p.ImagePath, $"{p.Title}_icon.png");
+                        project.LocalDetailImage = await DownloadImageAsync(p.DetailImagePath, $"{p.Title}_detail.png");
 
                         Projects.Add(project);
+                    }
+
+                    // =========================
+                    // GRIDVIEW LIMIT (ONLY UI)
+                    // =========================
+                    GridProjects.Clear();
+
+                    foreach (var p in Projects.Take(4))
+                    {
+                        GridProjects.Add(p);
                     }
                 }
             }

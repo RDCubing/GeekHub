@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Page.Resources>
-        <x:String x:Key="ChevronGlyph"></x:String>
+        <x:String x:Key="ChevronGlyph">&#xE26B;</x:String>
         <Storyboard x:Name="FadeInStoryboard">
 
             <!-- Fade in Title -->
@@ -95,7 +95,7 @@
                     <TranslateTransform x:Name="MainPanelTransform" X="200"/>
                 </StackPanel.RenderTransform>
                 <!-- Welcome Section -->
-                <Grid Width="425" Margin="0,0,40,0">
+                <Grid Width="425" Margin="50,0,40,0">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -103,22 +103,39 @@
                     </Grid.RowDefinitions>
 
                     <Button Grid.Row="0"
-        Content="Projects"
-        FontSize="36"
-        FontWeight="Light"
-        Foreground="White"
         Background="Transparent"
         BorderThickness="0"
         HorizontalAlignment="Left"
         Margin="0,0,0,20"
-        Click="ProjectsHeader_Click"/>
+        Click="ProjectsHeader_Click">
+
+                        <StackPanel Orientation="Horizontal"
+            VerticalAlignment="Center">
+
+                            <!-- Text -->
+                            <TextBlock Text="Projects"
+               FontSize="36"
+               FontWeight="Light"
+               Foreground="White"
+               VerticalAlignment="Center"/>
+
+                            <!-- Chevron -->
+                            <TextBlock Text="{StaticResource ChevronGlyph}"
+               FontFamily="Segoe MDL2 Assets"
+               FontSize="20"
+               Foreground="White"
+               VerticalAlignment="Center"
+               Margin="10,0,0,0"/>
+                        </StackPanel>
+
+                    </Button>
 
                     <GridView Grid.Row="1"
           x:Name="projectsGridView"
           AutomationProperties.AutomationId="ItemGridView"
           AutomationProperties.Name="Projects Grid"
           Padding="0"
-          ItemsSource="{Binding Projects}"
+          ItemsSource="{Binding GridProjects}"
           SelectionMode="None"
           IsSwipeEnabled="false"
           IsItemClickEnabled="True"
@@ -170,7 +187,7 @@
                 <Grid Width="500" Margin="0,0,40,0">
 
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="82"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
@@ -181,7 +198,7 @@
                FontWeight="Light"
                Foreground="White"
                Margin="0,0,0,20"
-               TextWrapping="Wrap"/>
+               TextWrapping="Wrap" VerticalAlignment="Center"/>
                     <!-- Row 1 Border -->
                     <Border Grid.Row="1"
         BorderThickness="2"
