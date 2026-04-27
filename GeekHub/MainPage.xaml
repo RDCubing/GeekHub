@@ -1,0 +1,223 @@
+﻿<Page
+    x:Class="GeekHub.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GeekHub"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <x:String x:Key="ChevronGlyph"></x:String>
+        <Storyboard x:Name="FadeInStoryboard">
+
+            <!-- Fade in Title -->
+            <DoubleAnimation
+            Storyboard.TargetName="TitleText"
+            Storyboard.TargetProperty="Opacity"
+            From="0" To="1"
+            Duration="0:0:0.6"
+            EnableDependentAnimation="True"/>
+
+        </Storyboard>
+        <Storyboard x:Name="FadeInContentStoryboard">
+
+            <!-- Fade in Title -->
+            <DoubleAnimation
+            Storyboard.TargetName="TitleTextFeed"
+            Storyboard.TargetProperty="Opacity"
+            From="0" To="1"
+            Duration="0:0:0.6"
+            EnableDependentAnimation="True"/>
+
+            <!-- Fade in Content (slight delay like Windows 8) -->
+            <DoubleAnimation
+            Storyboard.TargetName="ContentText"
+            Storyboard.TargetProperty="Opacity"
+            From="0" To="1"
+            Duration="0:0:0.6"
+            BeginTime="0:0:0.2"
+            EnableDependentAnimation="True"/>
+
+        </Storyboard>
+        <Storyboard x:Name="SlideInStoryboard">
+
+            <!-- Slide animation -->
+            <DoubleAnimation
+            Storyboard.TargetName="MainPanelTransform"
+            Storyboard.TargetProperty="X"
+            From="200" To="0"
+            Duration="0:0:1.2"
+            EnableDependentAnimation="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+
+            <!-- Optional: subtle fade-in -->
+            <DoubleAnimation
+            Storyboard.TargetName="MainPanel"
+            Storyboard.TargetProperty="Opacity"
+            From="0" To="1"
+            Duration="0:0:0.6"
+            EnableDependentAnimation="True"/>
+
+        </Storyboard>
+        
+
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock
+        Grid.Row="0"
+        Text="GeekHub (INDEV)"
+        x:Name="TitleText"
+        Margin="50"
+        Style="{StaticResource HeaderTextBlockStyle}" />
+
+        <!-- Content Area with horizontal scroll only -->
+        <ScrollViewer
+    Grid.Row="1"
+    ZoomMode="Disabled"
+    HorizontalScrollMode="Auto"
+    HorizontalScrollBarVisibility="Auto"
+    VerticalScrollMode="Disabled"
+    VerticalScrollBarVisibility="Disabled">
+
+            <StackPanel x:Name="MainPanel" Orientation="Horizontal" HorizontalAlignment="Left" Margin="20" >
+                <StackPanel.RenderTransform>
+                    <TranslateTransform x:Name="MainPanelTransform" X="200"/>
+                </StackPanel.RenderTransform>
+                <!-- Welcome Section -->
+                <Grid Width="425" Margin="0,0,40,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Row="0"
+        Content="Projects"
+        FontSize="36"
+        FontWeight="Light"
+        Foreground="White"
+        Background="Transparent"
+        BorderThickness="0"
+        HorizontalAlignment="Left"
+        Margin="0,0,0,20"
+        Click="ProjectsHeader_Click"/>
+
+                    <GridView Grid.Row="1"
+          x:Name="projectsGridView"
+          AutomationProperties.AutomationId="ItemGridView"
+          AutomationProperties.Name="Projects Grid"
+          Padding="0"
+          ItemsSource="{Binding Projects}"
+          SelectionMode="None"
+          IsSwipeEnabled="false"
+          IsItemClickEnabled="True"
+          ItemClick="ItemView_ItemClick">
+
+                        <GridView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Width="180" Height="180">
+
+                                    <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                                        <Image Source="{Binding ImagePath}"
+                           Stretch="UniformToFill"/>
+                                    </Border>
+
+                                    <StackPanel VerticalAlignment="Bottom"
+                            Background="{ThemeResource ListViewItemOverlayBackgroundThemeBrush}">
+
+                                        <TextBlock Text="{Binding Title}"
+                               Foreground="{ThemeResource ListViewItemOverlayForegroundThemeBrush}"
+                               Style="{StaticResource TitleTextBlockStyle}"
+                               FontSize="16"
+                               Height="40"
+                               Margin="10,0,10,0"/>
+
+                                        <TextBlock Text="{Binding Subtitle}"
+                               Foreground="{ThemeResource ListViewItemOverlaySecondaryForegroundThemeBrush}"
+                               Style="{StaticResource CaptionTextBlockStyle}"
+                               FontSize="10"
+                               TextWrapping="NoWrap"
+                               Margin="10,0,10,6"/>
+                                    </StackPanel>
+
+                                </Grid>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+
+                        <GridView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <ItemsWrapGrid ItemWidth="190"
+                           ItemHeight="190"
+                           GroupPadding="0,0,30,0"/>
+                            </ItemsPanelTemplate>
+                        </GridView.ItemsPanel>
+
+                    </GridView>
+
+                </Grid>
+                <!-- Welcome Section -->
+                <Grid Width="500" Margin="0,0,40,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Title -->
+                    <TextBlock Grid.Row="0"
+               Text="Latest News"
+               FontSize="36"
+               FontWeight="Light"
+               Foreground="White"
+               Margin="0,0,0,20"
+               TextWrapping="Wrap"/>
+                    <!-- Row 1 Border -->
+                    <Border Grid.Row="1"
+        BorderThickness="2"
+        BorderBrush="#66FFFFFF"
+        Padding="12"
+        Background="Transparent">
+
+                        <StackPanel>
+
+                            <!-- Title inside border -->
+                            <TextBlock Text="{Binding CurrentFeedItem.title}" x:Name="TitleTextFeed"
+           FontSize="28"
+           FontWeight="Light"
+           Foreground="White"
+           TextWrapping="Wrap"
+           Margin="0,0,0,12"
+           LineHeight="32"/>
+
+                            <!-- Content inside border -->
+                            <TextBlock Text="{Binding CurrentFeedItem.content}" x:Name="ContentText"
+           FontSize="16"
+           FontWeight="Light"
+           Foreground="#CCFFFFFF"
+           TextWrapping="Wrap"
+           LineHeight="22"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+
+                </Grid>
+
+            </StackPanel>
+
+        </ScrollViewer>
+    </Grid>
+</Page>
