@@ -79,24 +79,22 @@ namespace GeekHub
                         var imageFileName = $"{p.Title}_icon.png";
                         var detailFileName = $"{p.Title}_detail.png";
 
-                        var localImage = await DownloadImageAsync(p.ImagePath, imageFileName);
-                        var localDetail = await DownloadImageAsync(p.DetailImagePath, detailFileName);
-
-                        Projects.Add(new Project
+                        var project = new Project
                         {
                             Title = p.Title,
                             Subtitle = p.Subtitle,
-
-                            ImagePath = p.ImagePath,
-                            DetailImagePath = p.DetailImagePath,
-
-                            LocalImagePath = localImage,
-                            LocalDetailImagePath = localDetail,
-
                             Version = p.Version,
                             Description = p.Description,
-                            AccentBrush = new SolidColorBrush(HexToColor(p.AccentColor))
-                        });
+                            AccentBrush = new SolidColorBrush(HexToColor(p.AccentColor)),
+
+                            DownloadUrl = p.DownloadUrl,
+                            SourceUrl = p.SourceUrl
+                        };
+
+                        project.LocalImage = await DownloadImageAsync(p.ImagePath, imageFileName);
+                        project.LocalDetailImage = await DownloadImageAsync(p.DetailImagePath, detailFileName);
+
+                        Projects.Add(project);
                     }
                 }
             }
@@ -207,24 +205,29 @@ namespace GeekHub
             Frame.Navigate(typeof(ProjectPage)); // or open menu, refresh, etc.
         }
 
-        private async Task<string> DownloadImageAsync(string url, string fileName)
+        private async Task<BitmapImage> DownloadImageAsync(string url, string fileName)
         {
             try
             {
-                var folder = Windows.Storage.ApplicationData.Current.LocalFolder;
+                var folder = ApplicationData.Current.LocalFolder;
 
                 var file = await folder.CreateFileAsync(
                     fileName,
-                    Windows.Storage.CreationCollisionOption.ReplaceExisting);
+                    CreationCollisionOption.ReplaceExisting);
 
                 using (var client = new HttpClient())
                 {
                     var buffer = await client.GetBufferAsync(new Uri(url));
-                    await Windows.Storage.FileIO.WriteBufferAsync(file, buffer);
+                    await FileIO.WriteBufferAsync(file, buffer);
                 }
 
-                // ✅ IMPORTANT FIX
-                return "ms-appdata:///local/" + fileName;
+                var img = new BitmapImage();
+                using (var stream = await file.OpenAsync(FileAccessMode.Read))
+                {
+                    img.SetSource(stream);
+                }
+
+                return img;
             }
             catch
             {
@@ -267,15 +270,14 @@ namespace GeekHub
         public string Title { get; set; }
         public string Subtitle { get; set; }
 
-        public string ImagePath { get; set; }          // remote (from JSON)
-        public string DetailImagePath { get; set; }    // remote
-
-        public string LocalImagePath { get; set; }     // NEW
-        public string LocalDetailImagePath { get; set; } // NEW
+        public BitmapImage LocalImage { get; set; }
+        public BitmapImage LocalDetailImage { get; set; }
 
         public Brush AccentBrush { get; set; }
         public string Description { get; set; }
         public string Version { get; set; }
+        public string DownloadUrl { get; set; }
+        public string SourceUrl { get; set; }
     }
 
     public class ProjectDto
@@ -287,6 +289,8 @@ namespace GeekHub
         public string AccentColor { get; set; }
         public string Description { get; set; }
         public string Version { get; set; }
+        public string DownloadUrl { get; set; }
+        public string SourceUrl { get; set; }
     }
 
     public class ProjectFeed

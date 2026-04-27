@@ -63,7 +63,7 @@
 
                     <!-- HERO IMAGE -->
                     <Grid Height="320" Margin="0,0,0,30">
-                        <Image Source="{Binding LocalDetailImagePath}" Stretch="UniformToFill"/>
+                        <Image Source="{Binding LocalDetailImage}" Stretch="UniformToFill"/>
                         <Rectangle Fill="#66000000"/>
                         <StackPanel VerticalAlignment="Bottom" Margin="20">
                             <TextBlock Text="{Binding Title}"

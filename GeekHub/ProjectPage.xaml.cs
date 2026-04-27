@@ -107,14 +107,31 @@ namespace GeekHub
 
         #endregion
 
-        private void OpenProject_Click(object sender, RoutedEventArgs e)
+        private async void OpenProject_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: launch or navigate
+            var project = (sender as FrameworkElement)?.DataContext as Project;
+            if (project?.DownloadUrl == null) return;
+
+            var picker = new Windows.Storage.Pickers.FileSavePicker();
+            picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.Downloads;
+            picker.SuggestedFileName = project.Title;
+            picker.FileTypeChoices.Add("App Package", new List<string> { ".appx" });
+
+            var file = await picker.PickSaveFileAsync();
+            if (file == null) return;
+
+            var client = new Windows.Web.Http.HttpClient();
+            var buffer = await client.GetBufferAsync(new Uri(project.DownloadUrl));
+
+            await Windows.Storage.FileIO.WriteBufferAsync(file, buffer);
         }
 
-        private void ViewSource_Click(object sender, RoutedEventArgs e)
+        private async void ViewSource_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: open GitHub or link
+            var project = (sender as FrameworkElement)?.DataContext as Project;
+            if (project?.SourceUrl == null) return;
+
+            await Windows.System.Launcher.LaunchUriAsync(new Uri(project.SourceUrl));
         }
     }
 }
