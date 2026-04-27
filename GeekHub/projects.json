@@ -41,7 +41,7 @@
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/rlillo.png",
       "AccentColor": "#000000",
       "Version": "1.2.1.0",
-      "Description": "Discover music, updates, and exclusive content from ChrisRLillo."
+      "Description": "Discover music, updates, and exclusive content from ChrisRLillo.",
         "DownloadUrl": "https://github.com/RDCubing/ChrisRLillo-Music/releases/download/1.2.1.0/ChrisRLillo.Music_1.2.1.0_AnyCPU.appxbundle",
       "SourceUrl": "https://github.com/RDCubing/ChrisRLillo-Music"
     }

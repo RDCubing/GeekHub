@@ -26,6 +26,7 @@ namespace GeekHub
 
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private Project CurrentProject => this.DataContext as Project;
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
@@ -109,7 +110,7 @@ namespace GeekHub
 
         private async void OpenProject_Click(object sender, RoutedEventArgs e)
         {
-            var project = (sender as FrameworkElement)?.DataContext as Project;
+            var project = this.DataContext as Project;
             if (project?.DownloadUrl == null) return;
 
             var picker = new Windows.Storage.Pickers.FileSavePicker();
