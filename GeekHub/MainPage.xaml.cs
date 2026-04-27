@@ -18,6 +18,8 @@ using Windows.Web.Http;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Windows.UI;
+using Windows.Storage;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -74,12 +76,23 @@ namespace GeekHub
 
                     foreach (var p in projectFeed.projects)
                     {
+                        var imageFileName = $"{p.Title}_icon.png";
+                        var detailFileName = $"{p.Title}_detail.png";
+
+                        var localImage = await DownloadImageAsync(p.ImagePath, imageFileName);
+                        var localDetail = await DownloadImageAsync(p.DetailImagePath, detailFileName);
+
                         Projects.Add(new Project
                         {
                             Title = p.Title,
                             Subtitle = p.Subtitle,
+
                             ImagePath = p.ImagePath,
                             DetailImagePath = p.DetailImagePath,
+
+                            LocalImagePath = localImage,
+                            LocalDetailImagePath = localDetail,
+
                             Version = p.Version,
                             Description = p.Description,
                             AccentBrush = new SolidColorBrush(HexToColor(p.AccentColor))
@@ -194,7 +207,45 @@ namespace GeekHub
             Frame.Navigate(typeof(ProjectPage)); // or open menu, refresh, etc.
         }
 
+        private async Task<string> DownloadImageAsync(string url, string fileName)
+        {
+            try
+            {
+                var folder = Windows.Storage.ApplicationData.Current.LocalFolder;
 
+                var file = await folder.CreateFileAsync(
+                    fileName,
+                    Windows.Storage.CreationCollisionOption.ReplaceExisting);
+
+                using (var client = new HttpClient())
+                {
+                    var buffer = await client.GetBufferAsync(new Uri(url));
+                    await Windows.Storage.FileIO.WriteBufferAsync(file, buffer);
+                }
+
+                // ✅ IMPORTANT FIX
+                return "ms-appdata:///local/" + fileName;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        private async Task DeleteAllFiles(StorageFolder folder)
+        {
+            var files = await folder.GetFilesAsync();
+            foreach (var file in files)
+            {
+                await file.DeleteAsync();
+            }
+
+            var folders = await folder.GetFoldersAsync();
+            foreach (var sub in folders)
+            {
+                await sub.DeleteAsync();
+            }
+        }
     }
     public class Feed
     {
@@ -215,8 +266,13 @@ namespace GeekHub
     {
         public string Title { get; set; }
         public string Subtitle { get; set; }
-        public string ImagePath { get; set; }
-        public string DetailImagePath { get; set; }
+
+        public string ImagePath { get; set; }          // remote (from JSON)
+        public string DetailImagePath { get; set; }    // remote
+
+        public string LocalImagePath { get; set; }     // NEW
+        public string LocalDetailImagePath { get; set; } // NEW
+
         public Brush AccentBrush { get; set; }
         public string Description { get; set; }
         public string Version { get; set; }

@@ -129,7 +129,7 @@
                                 <Grid Width="180" Height="180">
 
                                     <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}">
-                                        <Image Source="{Binding ImagePath}"
+                                        <Image Source="{Binding LocalImagePath}"
                            Stretch="UniformToFill"/>
                                     </Border>
 
