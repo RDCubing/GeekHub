@@ -20,6 +20,7 @@ using System.ComponentModel;
 using Windows.UI;
 using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
+using System.Diagnostics;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -124,8 +125,57 @@ namespace GeekHub
             base.OnNavigatedTo(e);
             FadeInStoryboard.Begin();
             SlideInStoryboard.Begin();
+            await DeleteAllFiles(ApplicationData.Current.LocalFolder);
+            CheckStorage();
             LoadLatestFeed();
             await LoadProjectsAsync();
+        }
+
+        private async void CheckStorage()
+        {
+            double size = await GetAppStorageSizeMB();
+            Debug.WriteLine($"App storage: {size:F2} MB");
+        }
+
+        private async Task<double> GetAppStorageSizeMB()
+        {
+            long totalBytes = 0;
+
+            try
+            {
+                var folder = ApplicationData.Current.LocalFolder;
+                totalBytes = await GetFolderSizeAsync(folder);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Size check failed: " + ex.Message);
+            }
+
+            return totalBytes / 1024.0 / 1024.0;
+        }
+
+        private async Task<long> GetFolderSizeAsync(StorageFolder folder)
+        {
+            long size = 0;
+
+            var files = await folder.GetFilesAsync();
+            foreach (var file in files)
+            {
+                try
+                {
+                    var props = await file.GetBasicPropertiesAsync();
+                    size += (long)props.Size;
+                }
+                catch { }
+            }
+
+            var folders = await folder.GetFoldersAsync();
+            foreach (var sub in folders)
+            {
+                size += await GetFolderSizeAsync(sub);
+            }
+
+            return size;
         }
 
         private async Task<Feed> GetJsonFeedAsync()
@@ -201,8 +251,7 @@ namespace GeekHub
 
         private void ProjectsHeader_Click(object sender, RoutedEventArgs e)
         {
-            // Example action
-            Frame.Navigate(typeof(ProjectPage)); // or open menu, refresh, etc.
+            Frame.Navigate(typeof(ProjectsList), Projects);
         }
 
         private async Task<BitmapImage> DownloadImageAsync(string url, string fileName)
@@ -237,16 +286,15 @@ namespace GeekHub
 
         private async Task DeleteAllFiles(StorageFolder folder)
         {
-            var files = await folder.GetFilesAsync();
-            foreach (var file in files)
+            foreach (var file in await folder.GetFilesAsync())
             {
-                await file.DeleteAsync();
+                await file.DeleteAsync(StorageDeleteOption.PermanentDelete);
             }
 
-            var folders = await folder.GetFoldersAsync();
-            foreach (var sub in folders)
+            foreach (var subFolder in await folder.GetFoldersAsync())
             {
-                await sub.DeleteAsync();
+                await DeleteAllFiles(subFolder);
+                await subFolder.DeleteAsync(StorageDeleteOption.PermanentDelete);
             }
         }
     }

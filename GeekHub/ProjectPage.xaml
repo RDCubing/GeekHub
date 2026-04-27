@@ -92,7 +92,7 @@
                     <!-- ACTION BUTTONS -->
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
 
-                        <Button Content="Open Project"
+                        <Button Content="Download"
                         Padding="20,10"
                         Click="OpenProject_Click"/>
 
