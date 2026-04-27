@@ -167,6 +167,7 @@
     <Content Include="Images\q.png" />
     <Content Include="Images\quote.png" />
     <Content Include="Images\rlillo.png" />
+    <Content Include="TextFile1.txt" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
