@@ -21,8 +21,8 @@
     {
       "Title": "GDC Highlights",
       "Subtitle": "Latest news from GDC",
-      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/feed.png",
-      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/gdch.png",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/gdch.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/feed.png",
       "AccentColor": "#0081CC",
       "Version": "1.2.1.1",
       "Description": "Stay updated with the latest GDC news, releases, and community highlights in one place."
