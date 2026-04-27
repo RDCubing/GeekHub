@@ -53,63 +53,68 @@ namespace GeekHub
             Projects = new ObservableCollection<Project>();
             // IMPORTANT: set DataContext
             this.DataContext = this;
-            LoadProjects();
         }
 
-        private void LoadProjects()
+        private async Task LoadProjectsAsync()
         {
-            Projects.Add(new Project
+            try
             {
-                Title = "QuoteTile",
-                Subtitle = "Seek inspiration from quotes",
-                ImagePath = "ms-appx:///Images/q.png",
-                DetailImagePath = "ms-appx:///Images/quote.png",
-                AccentBrush = new SolidColorBrush(Color.FromArgb(255, 13, 71, 161)),
-                Version = "2.1.3.0",
-                Description = "QuoteTile is a simple app that shows inspiring quotes. Refresh quotes anytime, copy quotes to clipboard with one single click, and share quotes anywhere! Choose your favorite quotes and store them as many as you like!"
-            });
+                var baseUrl = "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/projects.json";
+                var url = $"{baseUrl}?t={DateTime.UtcNow.Ticks}";
 
-            Projects.Add(new Project
+                using (var client = new HttpClient())
+                {
+                    var json = await client.GetStringAsync(new Uri(url));
+                    var projectFeed = JsonConvert.DeserializeObject<ProjectFeed>(json);
+
+                    if (projectFeed?.projects == null)
+                        return;
+
+                    Projects.Clear();
+
+                    foreach (var p in projectFeed.projects)
+                    {
+                        Projects.Add(new Project
+                        {
+                            Title = p.Title,
+                            Subtitle = p.Subtitle,
+                            ImagePath = p.ImagePath,
+                            DetailImagePath = p.DetailImagePath,
+                            Version = p.Version,
+                            Description = p.Description,
+                            AccentBrush = new SolidColorBrush(HexToColor(p.AccentColor))
+                        });
+                    }
+                }
+            }
+            catch (Exception ex)
             {
-                Title = "GDC Media Player",
-                Subtitle = "Vibe-cooling media player",
-                ImagePath = "ms-appx:///Images/mp3.png",
-                DetailImagePath = "ms-appx:///Images/media.png",
-                AccentBrush = new SolidColorBrush(Color.FromArgb(255, 86, 18, 105)),
-                Version = "1.3.0.0",
-                Description = "GDC Media Player is a lightweight and modern audio player built for music lovers and tech enthusiasts. It delivers high-quality playback with minimal resource usage, keeping your tunes at the center. Designed for the Geek Devs Comm community, it combines simplicity with smart library management for the ultimate listening experience."
-            });
-
-            Projects.Add(new Project
-            {
-                Title = "GDC Highlights",
-                Subtitle = "Latest news from GDC",
-                ImagePath = "ms-appx:///Images/gdch.png",
-                DetailImagePath = "ms-appx:///Images/feed.png",
-                AccentBrush = new SolidColorBrush(Color.FromArgb(255, 0, 129, 204)),
-                Version = "1.2.1.1",
-                Description = "GDC Highlights is a Windows 8 app that brings the latest news, updates, and community highlights directly from GDC Management, providing a central hub for everything happening in the GDC ecosystem. Hosted via Gist, the app makes the JSON feed easily accessible to everyone, allowing both casual users and developers to stay informed or integrate the updates into their own projects. Beyond general news, GDC Highlights also posts official updates related to GDC Mainline Apps, including new features, bug fixes, and performance improvements, making it the go-to source for keeping up with the latest releases, community projects, and insights from the GDC team, all in a single, convenient app. Additionally, GDC Highlights supports RSS feeds, enabling users to subscribe to their favorite updates and receive real-time news directly within the app."
-
-            });
-
-            Projects.Add(new Project
-            {
-                Title = "ChrisRLillo Music",
-                Subtitle = "Chilean music in its peak",
-                ImagePath = "ms-appx:///Images/chris.png",
-                DetailImagePath = "ms-appx:///Images/rlillo.png",
-                AccentBrush = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0)),
-                Version = "1.2.1.0",
-                Description = "Discover the latest songs, updates, and exclusive content from ChrisRLillo. Explore, enjoy, and stay tuned for more!"
-            });
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+            }
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        private Color HexToColor(string hex)
+        {
+            if (string.IsNullOrEmpty(hex))
+                return Colors.Transparent;
+
+            hex = hex.Replace("#", "");
+
+            byte a = 255;
+            byte r = Convert.ToByte(hex.Substring(0, 2), 16);
+            byte g = Convert.ToByte(hex.Substring(2, 2), 16);
+            byte b = Convert.ToByte(hex.Substring(4, 2), 16);
+
+            return Color.FromArgb(a, r, g, b);
+        }
+
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             FadeInStoryboard.Begin();
             SlideInStoryboard.Begin();
             LoadLatestFeed();
+            await LoadProjectsAsync();
         }
 
         private async Task<Feed> GetJsonFeedAsync()
@@ -215,5 +220,21 @@ namespace GeekHub
         public Brush AccentBrush { get; set; }
         public string Description { get; set; }
         public string Version { get; set; }
+    }
+
+    public class ProjectDto
+    {
+        public string Title { get; set; }
+        public string Subtitle { get; set; }
+        public string ImagePath { get; set; }
+        public string DetailImagePath { get; set; }
+        public string AccentColor { get; set; }
+        public string Description { get; set; }
+        public string Version { get; set; }
+    }
+
+    public class ProjectFeed
+    {
+        public List<ProjectDto> projects { get; set; }
     }
 }
