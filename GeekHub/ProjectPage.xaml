@@ -66,100 +66,80 @@
         <ScrollViewer
     Grid.Row="1"
     ZoomMode="Disabled"
-    HorizontalScrollMode="Disabled"
-    HorizontalScrollBarVisibility="Disabled"
-    VerticalScrollMode="Auto"
-    VerticalScrollBarVisibility="Auto">
+    HorizontalScrollMode="Auto"
+    HorizontalScrollBarVisibility="Auto"
+    VerticalScrollMode="Disabled"
+    VerticalScrollBarVisibility="Disabled">
 
-            <Grid Margin="40,0,0,40"
-      HorizontalAlignment="Left"
-      Width="900">
+            <Grid>
+                <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="40">
 
-                <StackPanel>
+                    <!-- LEFT SIDE (Hero + About) -->
+                    <StackPanel Width="500" Margin="0,0,30,0">
 
-                    <!-- HERO IMAGE -->
-                    <Grid Height="320" Margin="0,0,0,30">
-                        <Image Source="{Binding LocalDetailImage}" Stretch="UniformToFill"/>
-                        <Rectangle Fill="#66000000"/>
-                        <StackPanel VerticalAlignment="Bottom" Margin="20">
-                            <TextBlock Text="{Binding Title}"
-                               FontSize="40"
-                               FontWeight="Light"
-                               Foreground="White"/>
-                            <TextBlock Text="{Binding Subtitle}"
-                               FontSize="18"
-                               Foreground="#DDFFFFFF"/>
-                        </StackPanel>
-                    </Grid>
+                        <!-- HERO -->
+                        <Grid Height="320" Margin="0,0,0,20">
+                            <Image Source="{Binding LocalDetailImage}" Stretch="UniformToFill"/>
+                            <Rectangle Fill="#66000000"/>
+                            <StackPanel VerticalAlignment="Bottom" Margin="20">
+                                <TextBlock Text="{Binding Title}"
+                                   FontSize="40"
+                                   FontWeight="Light"
+                                   Foreground="White"/>
+                                <TextBlock Text="{Binding Subtitle}"
+                                   FontSize="18"
+                                   Foreground="#DDFFFFFF"/>
+                            </StackPanel>
+                        </Grid>
 
-                    <!-- DESCRIPTION -->
-                    <TextBlock Text="About this project"
-                       FontSize="26"
-                       FontWeight="Light"
-                       Foreground="White"
-                       Margin="0,0,0,10"/>
+                        <!-- ABOUT (NOW UNDER IMAGE) -->
+                        <TextBlock Text="About this project"
+                           FontSize="26"
+                           FontWeight="Light"
+                           Foreground="White"
+                           Margin="0,0,0,10"/>
 
-                    <TextBlock Text="{Binding Description}"
-                       FontSize="16"
-                       Foreground="#CCCCCC"
-                       TextWrapping="Wrap"
-                       Margin="0,0,0,30"/>
+                        <TextBlock Text="{Binding Description}"
+                           FontSize="16"
+                           Foreground="#CCCCCC"
+                           TextWrapping="Wrap"/>
 
-                    <!-- ACTION BUTTONS -->
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+                    </StackPanel>
 
+                    <!-- ACTIONS -->
+                    <StackPanel Margin="0,0,30,0">
                         <Button Content="Download"
                         Padding="20,10"
+                        Margin="0,0,0,10"
                         Click="OpenProject_Click"/>
 
                         <Button Content="View Source"
                         Padding="20,10"
                         Click="ViewSource_Click"/>
-
                     </StackPanel>
 
-                    <!-- EXTRA INFO -->
-                    <TextBlock Text="Details"
-                       FontSize="26"
-                       FontWeight="Light"
-                       Foreground="White"
-                       Margin="0,0,0,10"/>
+                    <!-- DETAILS -->
+                    <StackPanel Width="300">
+                        <TextBlock Text="Details"
+                           FontSize="26"
+                           FontWeight="Light"
+                           Foreground="White"
+                           Margin="0,0,0,10"/>
 
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="200"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Version:" Foreground="#888"/>
+                        <TextBlock Text="{Binding Version}" Foreground="#CCC" Margin="0,0,0,10"/>
 
-                        <TextBlock Text="Version:"
-                           Foreground="#888"
-                           Grid.Column="0"/>
-                        <TextBlock Text="{Binding Version}"
-                           Foreground="#CCC"
-                           Grid.Column="1"/>
+                        <TextBlock Text="Platform:" Foreground="#888"/>
+                        <TextBlock Text="Windows" Foreground="#CCC" Margin="0,0,0,10"/>
 
-                        <TextBlock Text="Platform:"
-                           Foreground="#888"
-                           Grid.Column="0"
-                           Margin="0,30,0,0"/>
-                        <TextBlock Text="Windows"
-                           Foreground="#CCC"
-                           Grid.Column="1"
-                           Margin="0,30,0,0"/>
-
-                        <TextBlock Text="Status:"
-                           Foreground="#888"
-                           Grid.Column="0"
-                           Margin="0,60,0,0"/>
-                        <TextBlock Text="Active Development"
-                           Foreground="#4CAF50"
-                           Grid.Column="1"
-                           Margin="0,60,0,0"/>
-
-                    </Grid>
+                        <TextBlock Text="Status:" Foreground="#888"/>
+                        <TextBlock Text="Active Development" Foreground="#4CAF50"/>
+                    </StackPanel>
 
                 </StackPanel>
-
             </Grid>
 
         </ScrollViewer>

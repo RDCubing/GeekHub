@@ -14,6 +14,11 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.ApplicationSettings;
+using Windows.System;
+using Windows.Storage;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
@@ -80,6 +85,8 @@ namespace GeekHub
             }
             // Ensure the current window is active
             Window.Current.Activate();
+            SettingsPane.GetForCurrentView().CommandsRequested += OnCommandsRequested;
+
         }
 
         /// <summary>
@@ -104,6 +111,31 @@ namespace GeekHub
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+
+        private void OnCommandsRequested(Windows.UI.ApplicationSettings.SettingsPane sender,
+                    Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs args)
+        {
+            args.Request.ApplicationCommands.Add(
+        new SettingsCommand("openWebsite", "Visit Website", async (p) =>
+        {
+            var uri = new Uri("https://rdcubing.github.io/");
+            await Launcher.LaunchUriAsync(uri);
+        })
+    );
+            args.Request.ApplicationCommands.Add(
+                new SettingsCommand("openServer", "Discord Server", async (p) =>
+                {
+                    var uri = new Uri("https://discord.gg/kYQz5agYtT");
+                    await Launcher.LaunchUriAsync(uri);
+                })
+            );
+            args.Request.ApplicationCommands.Add(new Windows.UI.ApplicationSettings.SettingsCommand(
+                "about",
+                "About",
+                handler => { new About().Show(); }
+            ));
         }
     }
 }

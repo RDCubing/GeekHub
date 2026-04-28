@@ -23,6 +23,8 @@ using Windows.UI.Xaml.Media.Imaging;
 using System.Diagnostics;
 using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
+using Windows.UI.ApplicationSettings;
+using Windows.System;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -43,6 +45,8 @@ namespace GeekHub
         private List<Project> _tileProjects;
         private int _tileIndex = 0;
         public ObservableCollection<Project> GridProjects { get; set; }
+        public Project FeaturedProject { get; set; }
+        private const int FeaturedIndex = 8;
 
         public FeedItem CurrentFeedItem
         {
@@ -102,6 +106,12 @@ namespace GeekHub
                         Projects.Add(project);
                     }
 
+                    FeaturedProject = Projects.Count > FeaturedIndex
+    ? Projects[FeaturedIndex]
+    : Projects.FirstOrDefault();
+
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(FeaturedProject)));
+
                     // =========================
                     // GRIDVIEW LIMIT (ONLY UI)
                     // =========================
@@ -138,6 +148,7 @@ namespace GeekHub
         {
             base.OnNavigatedTo(e);
             FadeInStoryboard.Begin();
+            LongFadeInStoryboard.Begin();
             SlideInStoryboard.Begin();
             await DeleteAllFiles(ApplicationData.Current.LocalFolder);
             CheckStorage();
@@ -386,6 +397,14 @@ namespace GeekHub
             Frame.Navigate(typeof(ProjectPage), project);
         }
 
+        private void FeaturedProject_Click(object sender, RoutedEventArgs e)
+        {
+            if (FeaturedProject == null)
+                return;
+
+            Frame.Navigate(typeof(ProjectPage), FeaturedProject);
+        }
+
         private void Header_Click(object sender, RoutedEventArgs e)
         {
             // Example placeholder behavior
@@ -443,6 +462,7 @@ namespace GeekHub
                 await subFolder.DeleteAsync(StorageDeleteOption.PermanentDelete);
             }
         }
+
     }
     public class Feed
     {

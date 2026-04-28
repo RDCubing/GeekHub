@@ -3,6 +3,7 @@
     {
       "Title": "QuoteTile",
       "Subtitle": "Seek inspiration from quotes",
+      "Publisher":  "Andrew Simson",
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/q.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/quote.png",
       "AccentColor": "#0D47A1",
@@ -14,6 +15,7 @@
     {
       "Title": "QuoteTile LTS",
       "Subtitle": "Seek inspiration from quotes",
+      "Publisher":  "Andrew Simson",
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/lts.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/ltswide.png",
       "AccentColor": "#561269",
@@ -25,6 +27,7 @@
     {
       "Title": "GDC Media Player",
       "Subtitle": "Vibe-cooling media player",
+      "Publisher":  "Andrew Simson",
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/mp3.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/media.png",
       "AccentColor": "#561269",
@@ -36,6 +39,7 @@
     {
       "Title": "GDC Highlights",
       "Subtitle": "Latest news from GDC",
+      "Publisher":  "Andrew",
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/gdch.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/feed.png",
       "AccentColor": "#0081CC",
@@ -48,6 +52,7 @@
     {
       "Title": "GDC Highlights 1",
       "Subtitle": "Latest news from GDC",
+      "Publisher":  "Andrew",
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/1.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/feed.png",
       "AccentColor": "#171717",
@@ -60,6 +65,7 @@
     {
       "Title": "GDC Highlights 2",
       "Subtitle": "Latest news from GDC",
+      "Publisher":  "Andrew",
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/2.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/feed.png",
       "AccentColor": "#661414",
@@ -72,6 +78,7 @@
     {
       "Title": "GDC Highlights 3",
       "Subtitle": "Latest news from GDC",
+      "Publisher":  "Andrew",
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/3.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/feed.png",
       "AccentColor": "#053827",
@@ -84,6 +91,7 @@
     {
       "Title": "GDC Highlights 4",
       "Subtitle": "Latest news from GDC",
+      "Publisher":  "Andrew",
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/4.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/feed.png",
       "AccentColor": "#7a6200",
@@ -96,6 +104,7 @@
     {
       "Title": "ChrisRLillo Music",
       "Subtitle": "Chilean music in its peak",
+      "Publisher":  "ChrisRLillo & Andrew from GDC",
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/chris.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/rlillo.png",
       "AccentColor": "#000000",
