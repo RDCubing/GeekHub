@@ -116,7 +116,7 @@
     {
       "Title": "ConverterCalculatorGUI",
       "Subtitle": "Scientific Calculator",
-      "Publisher":  "ChrisRLillo & Andrew from GDC",
+      "Publisher":  "Andrew",
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Assets/Logo.scale-100.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/calc.png",
       "AccentColor": "#000000",
