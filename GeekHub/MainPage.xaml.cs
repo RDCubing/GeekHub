@@ -92,6 +92,7 @@ namespace GeekHub
                         {
                             Title = p.Title,
                             Subtitle = p.Subtitle,
+                            Publisher = p.Publisher,
                             Version = p.Version,
                             Description = p.Description,
                             AccentBrush = new SolidColorBrush(HexToColor(p.AccentColor)),
@@ -143,6 +144,22 @@ namespace GeekHub
 
             return Color.FromArgb(a, r, g, b);
         }
+
+        private void FeedHeader_Click(object sender, RoutedEventArgs e)
+        {
+            if (Projects == null || Projects.Count == 0)
+                return;
+
+            // Example: open 9th project (index 8)
+            int index = 3;
+
+            if (Projects.Count > index)
+            {
+                var project = Projects[index];
+                Frame.Navigate(typeof(ProjectPage), project);
+            }
+        }
+
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -493,6 +510,7 @@ namespace GeekHub
         public string DownloadUrl { get; set; }
         public string SourceUrl { get; set; }
         public string ImagePath { get; set; }
+        public string Publisher { get; set; }
     }
 
     public class ProjectDto
@@ -506,6 +524,7 @@ namespace GeekHub
         public string Version { get; set; }
         public string DownloadUrl { get; set; }
         public string SourceUrl { get; set; }
+        public string Publisher { get; set; }
     }
 
     public class ProjectFeed

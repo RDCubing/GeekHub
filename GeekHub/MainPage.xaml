@@ -109,7 +109,7 @@
         <!-- Header -->
         <TextBlock
         Grid.Row="0"
-        Text="GeekHub (INDEV)"
+        Text="GeekHub"
         x:Name="TitleText"
         Margin="50"
         Style="{StaticResource HeaderTextBlockStyle}" />
@@ -127,56 +127,8 @@
                 <StackPanel.RenderTransform>
                     <TranslateTransform x:Name="MainPanelTransform" X="200"/>
                 </StackPanel.RenderTransform>
-                <!-- Welcome Section -->
-                <Grid Width="500" Margin="50,0,40,0">
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="82"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <!-- Title -->
-                    <TextBlock Grid.Row="0"
-               Text="Suggested"
-               FontSize="36"
-               FontWeight="Light"
-               Foreground="White"
-               Margin="0,0,0,20"
-               TextWrapping="Wrap" VerticalAlignment="Center"/>
-                    <!-- Row 1 Border -->
-                    <Border Grid.Row="1"
-        BorderThickness="2"
-        BorderBrush="#66FFFFFF"
-        Padding="12"
-        Background="Transparent">
-
-                        <StackPanel>
-
-                            <!-- Title inside border -->
-                            <TextBlock Text="Welcome to GeekHub!"
-           FontSize="28"
-           FontWeight="Light"
-           Foreground="White"
-           TextWrapping="Wrap"
-           Margin="0,0,0,12"
-           LineHeight="32"/>
-
-                            <!-- Content inside border -->
-                            <TextBlock Text="Welcome to GeekHub, your central place for exploring projects, updates, and creative ideas all in one space. Here you can browse the latest builds, read fresh updates, and discover what's being worked on in real time. GeekHub is designed to keep everything organized and easy to access, so you can quickly jump between projects and stay up to date with new releases and features."
-           FontSize="16"
-           FontWeight="Light"
-           Foreground="#CCFFFFFF"
-           TextWrapping="Wrap"
-           LineHeight="22"/>
-
-                        </StackPanel>
-
-                    </Border>
-
-
-
-                </Grid>
-                <Grid Width="650" Margin="0,0,40,0">
+                
+                <Grid Width="650" Margin="50,0,40,0">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -314,6 +266,11 @@
                                FontSize="10"
                                TextWrapping="NoWrap"
                                Margin="10,0,10,6"/>
+                                        <TextBlock Text="{Binding Publisher}"
+           Foreground="#99FFFFFF"
+           FontSize="11"
+           Margin="10,0,10,6"
+           TextTrimming="CharacterEllipsis"/>
                                     </StackPanel>
 
                                 </Grid>
@@ -332,7 +289,7 @@
 
                 </Grid>
                 <!-- Welcome Section -->
-                <Grid Width="500" Margin="0,0,40,0">
+                <Grid Width="640" Margin="50,0,40,0">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="82"/>
@@ -341,12 +298,87 @@
 
                     <!-- Title -->
                     <TextBlock Grid.Row="0"
-               Text="Latest News"
+               Text="Suggested"
                FontSize="36"
                FontWeight="Light"
                Foreground="White"
                Margin="0,0,0,20"
                TextWrapping="Wrap" VerticalAlignment="Center"/>
+                    <!-- Row 1 Border -->
+                    <Border Grid.Row="1"
+        BorderThickness="2"
+        BorderBrush="#66FFFFFF"
+        Padding="12"
+        Background="Transparent">
+
+                        <StackPanel>
+
+                            <!-- Title inside border -->
+                            <TextBlock Text="Welcome to GeekHub!"
+           FontSize="28"
+           FontWeight="Light"
+           Foreground="White"
+           TextWrapping="Wrap"
+           Margin="0,0,0,12"
+           LineHeight="32"/>
+
+                            <!-- Content inside border -->
+                            <TextBlock Text="Welcome to GeekHub, your central place for exploring projects, updates, and creative ideas all in one space. Here you can browse the latest builds, read fresh updates, and discover what's being worked on in real time. GeekHub is designed to keep everything organized and easy to access, so you can quickly jump between projects and stay up to date with new releases and features."
+           FontSize="16" Margin="0,0,0,12"
+           FontWeight="Light"
+           Foreground="#CCFFFFFF"
+           TextWrapping="Wrap"
+           LineHeight="22"/>
+                            <!-- Content inside border -->
+                            <TextBlock Text="NanoStore is a lightweight, mini app-store–style system originally developed by Alex and later merged into GeekHub through GitHub repositories. It is inspired by the concept of the Windows 8 Store, but designed in a much smaller and simpler form, focusing on fast browsing, easy installation, and lightweight distribution of apps or tools. Unlike full-scale marketplaces, NanoStore is intended for local or community-based use, making it suitable for small ecosystems where users can quickly access and manage applications without the complexity of a large commercial store."
+           FontSize="16"
+           FontWeight="Light"
+           Foreground="#CCFFFFFF"
+           TextWrapping="Wrap"
+           LineHeight="22"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+
+                </Grid>
+                <!-- Welcome Section -->
+                <Grid Width="500" Margin="50,0,40,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="82"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Row="0"
+        Background="Transparent"
+        BorderThickness="0"
+        HorizontalAlignment="Left"
+        Margin="0,0,0,20"
+        Click="FeedHeader_Click">
+
+                        <StackPanel Orientation="Horizontal"
+            VerticalAlignment="Center">
+
+                            <!-- Text -->
+                            <TextBlock Text="Latest News"
+               FontSize="36"
+               FontWeight="Light"
+               Foreground="White"
+               VerticalAlignment="Center"/>
+
+                            <!-- Chevron -->
+                            <TextBlock Text="{StaticResource ChevronGlyph}"
+               FontFamily="Segoe MDL2 Assets"
+               FontSize="20"
+               Foreground="White"
+               VerticalAlignment="Center"
+               Margin="10,0,0,0"/>
+                        </StackPanel>
+
+                    </Button>
                     <!-- Row 1 Border -->
                     <Border Grid.Row="1"
         BorderThickness="2"

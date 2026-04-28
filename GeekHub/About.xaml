@@ -40,7 +40,7 @@
             </TextBlock>
             <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
                 <TextBlock.Text>
-                    NanoStore is a lightweight embedded database originally developed by Alex and later merged into GeekHub. It is designed to provide a simple, fast, and efficient way to store and manage data within applications without the overhead of a full database management system. Similar in concept to SQLite, NanoStore focuses on ease of integration, minimal resource usage, and straightforward data handling, making it suitable for small projects, tools, and applications that require reliable local storage.
+                    NanoStore is a lightweight, mini app-store–style system originally developed by Alex and later merged into GeekHub through GitHub repositories. It is inspired by the concept of the Windows 8 Store, but designed in a much smaller and simpler form, focusing on fast browsing, easy installation, and lightweight distribution of apps or tools. Unlike full-scale marketplaces, NanoStore is intended for local or community-based use, making it suitable for small ecosystems where users can quickly access and manage applications without the complexity of a large commercial store.
                 </TextBlock.Text>
             </TextBlock>
             

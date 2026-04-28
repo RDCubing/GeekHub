@@ -5,9 +5,137 @@
     xmlns:local="using:GeekHub"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+
+        <!-- FADE IN -->
+        <Storyboard x:Name="GridFadeInStoryboard">
+
+            <DoubleAnimation
+            Storyboard.TargetName="MyGrid"
+            Storyboard.TargetProperty="Opacity"
+            From="0"
+            To="1"
+            Duration="0:0:0.6"
+            EnableDependentAnimation="True"/>
+
+        </Storyboard>
+
+        <!-- FADE OUT -->
+        <Storyboard x:Name="GridFadeOutStoryboard">
+
+            <DoubleAnimation
+            Storyboard.TargetName="MyGrid"
+            Storyboard.TargetProperty="Opacity"
+            From="1"
+            To="0"
+            Duration="0:0:0.4"
+            EnableDependentAnimation="True"/>
+
+        </Storyboard>
+
+    </Page.Resources>
+
+    <Grid>
+
+        <!-- BACKGROUND -->
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#661E3C72" Offset="0.0"/>
+                <GradientStop Color="#662A5298" Offset="0.25"/>
+                <GradientStop Color="#666A11CB" Offset="0.5"/>
+                <GradientStop Color="#662575FC" Offset="0.75"/>
+                <GradientStop Color="#6600C6FF" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <!-- HORIZONTAL SCROLL WRAPPER -->
+        <ScrollViewer
+    HorizontalScrollMode="Auto"
+    HorizontalScrollBarVisibility="Auto"
+    VerticalScrollMode="Disabled"
+    VerticalScrollBarVisibility="Disabled"
+    ZoomMode="Disabled">
+
+            <StackPanel x:Name="MyGrid"
+                Orientation="Horizontal"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="80,0,0,0">
+
+                <!-- COLUMN 1 -->
+                <StackPanel Width="500">
+
+                    <TextBlock Text="Welcome to GeekHub"
+                       FontSize="56"
+                       FontWeight="Light"
+                       Foreground="White"
+                       TextWrapping="Wrap"/>
+
+                    <TextBlock Text="Your apps, projects, and updates in one place."
+                       FontSize="22"
+                       Foreground="#CCFFFFFF"
+                       Margin="0,20,0,40"
+                       TextWrapping="Wrap"
+                       LineHeight="28"/>
+
+                    <Button Content="Get Started"
+                    Width="240"
+                    Height="60"
+                    FontSize="18"
+                    Background="#33000000"
+                    Foreground="White"
+                    BorderThickness="0"
+                    HorizontalAlignment="Left"
+                    Click="GetStarted_Click"/>
+
+                </StackPanel>
+
+                <!-- COLUMN 2 -->
+                <StackPanel Width="900" Margin="0,0,50,0">
+
+                    <TextBlock Text="Introducing NanoStore"
+                       FontSize="54"
+                       FontWeight="Light"
+                       Foreground="White"
+                       Margin="0,0,0,20"
+                       TextWrapping="Wrap"/>
+
+                    <Border Height="320"
+                    Margin="0,0,0,25"
+                    Background="#22000000">
+
+                        <Image Source="ms-appx:///Assets/nanostore.png"
+                       Stretch="UniformToFill"/>
+                    </Border>
+
+                    <TextBlock Text="NanoStore is a lightweight, mini app-store–style system originally developed by Alex and later merged into GeekHub through GitHub repositories. It is inspired by the concept of the Windows 8 Store, but designed in a much smaller and simpler form, focusing on fast browsing, easy installation, and lightweight distribution of apps or tools. Unlike full-scale marketplaces, NanoStore is intended for local or community-based use, making it suitable for small ecosystems where users can quickly access and manage applications without the complexity of a large commercial store."
+                       FontSize="18"
+                       Foreground="#CCFFFFFF"
+                       TextWrapping="Wrap"
+                       LineHeight="26"/>
+
+                </StackPanel>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+        <!-- AUDIO -->
+        <MediaElement x:Name="BackgroundAudio"
+                  Source="ms-appx:///Audio/song04.mp3"
+                  AutoPlay="True"
+                  IsLooping="True"
+                  Volume="1"
+                  Visibility="Collapsed"/>
 
     </Grid>
 </Page>

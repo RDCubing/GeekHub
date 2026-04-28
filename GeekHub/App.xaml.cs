@@ -78,10 +78,20 @@ namespace GeekHub
 
             if (rootFrame.Content == null)
             {
-                // When the navigation stack isn't restored navigate to the first page,
-                // configuring the new page by passing required information as a navigation
-                // parameter
-                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+
+                bool isFirstLaunch = !localSettings.Values.ContainsKey("HasLaunched");
+
+                if (isFirstLaunch)
+                {
+                    localSettings.Values["HasLaunched"] = true;
+
+                    rootFrame.Navigate(typeof(Welcome), e.Arguments);
+                }
+                else
+                {
+                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                }
             }
             // Ensure the current window is active
             Window.Current.Activate();
@@ -117,6 +127,17 @@ namespace GeekHub
         private void OnCommandsRequested(Windows.UI.ApplicationSettings.SettingsPane sender,
                     Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs args)
         {
+            args.Request.ApplicationCommands.Add(
+    new SettingsCommand("openWelcome", "Welcome Screen", (p) =>
+    {
+        var frame = Window.Current.Content as Frame;
+        if (frame != null)
+        {
+            frame.Navigate(typeof(Welcome));
+        }
+    })
+);
+
             args.Request.ApplicationCommands.Add(
         new SettingsCommand("openWebsite", "Visit Website", async (p) =>
         {

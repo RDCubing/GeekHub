@@ -125,6 +125,12 @@
                                    FontSize="13"
                                    Margin="0,6,0,0"
                                    TextWrapping="Wrap"/>
+                                        <!-- ✅ NEW: Publisher -->
+                                        <TextBlock Text="{Binding Publisher}"
+               Foreground="#88FFFFFF"
+               FontSize="11"
+               Margin="0,4,0,0"
+               TextWrapping="Wrap"/>
 
                                     </StackPanel>
 

@@ -26,5 +26,30 @@ namespace GeekHub
         {
             this.InitializeComponent();
         }
+
+        private void GetStarted_Click(object sender, RoutedEventArgs e)
+        {
+            GridFadeOutStoryboard.Completed += FadeOutStoryboard_Completed;
+            GridFadeOutStoryboard.Begin();
+        }
+
+        private void FadeOutStoryboard_Completed(object sender, object e)
+        {
+            var frame = Window.Current.Content as Frame;
+            frame?.Navigate(typeof(MainPage));
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            BackgroundAudio.Play();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            System.Diagnostics.Debug.WriteLine("WELCOME PAGE LOADED");
+            GridFadeInStoryboard.Begin();
+        }
     }
 }
