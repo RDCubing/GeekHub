@@ -74,20 +74,20 @@
                 <!-- COLUMN 1 -->
                 <StackPanel Width="500">
 
-                    <TextBlock Text="Welcome to GeekHub"
+                    <TextBlock x:Uid="WelcomeTitle" Text="Welcome to GeekHub"
                        FontSize="56"
                        FontWeight="Light"
                        Foreground="White"
                        TextWrapping="Wrap"/>
 
-                    <TextBlock Text="Your apps, projects, and updates in one place."
+                    <TextBlock x:Uid="WelcomeSub" Text="Your apps, projects, and updates in one place."
                        FontSize="22"
                        Foreground="#CCFFFFFF"
                        Margin="0,20,0,40"
                        TextWrapping="Wrap"
                        LineHeight="28"/>
 
-                    <Button Content="Get Started"
+                    <Button x:Uid="GetStarted"
                     Width="240"
                     Height="60"
                     FontSize="18"
@@ -102,7 +102,7 @@
                 <!-- COLUMN 2 -->
                 <StackPanel Width="900" Margin="0,0,50,0">
 
-                    <TextBlock Text="Introducing NanoStore"
+                    <TextBlock x:Uid="IntroducingNano" Text="Introducing NanoStore"
                        FontSize="54"
                        FontWeight="Light"
                        Foreground="White"
@@ -117,7 +117,7 @@
                        Stretch="UniformToFill"/>
                     </Border>
 
-                    <TextBlock Text="NanoStore is a lightweight, mini app-store–style system originally developed by Alex and later merged into GeekHub through GitHub repositories. It is inspired by the concept of the Windows 8 Store, but designed in a much smaller and simpler form, focusing on fast browsing, easy installation, and lightweight distribution of apps or tools. Unlike full-scale marketplaces, NanoStore is intended for local or community-based use, making it suitable for small ecosystems where users can quickly access and manage applications without the complexity of a large commercial store."
+                    <TextBlock x:Uid="WelcomeNanoContent" Text="NanoStore is a lightweight, mini app-store–style system originally developed by Alex and later merged into GeekHub through GitHub repositories. It is inspired by the concept of the Windows 8 Store, but designed in a much smaller and simpler form, focusing on fast browsing, easy installation, and lightweight distribution of apps or tools. Unlike full-scale marketplaces, NanoStore is intended for local or community-based use, making it suitable for small ecosystems where users can quickly access and manage applications without the complexity of a large commercial store."
                        FontSize="18"
                        Foreground="#CCFFFFFF"
                        TextWrapping="Wrap"

@@ -27,34 +27,29 @@
             <!-- Section 1 header -->
             <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="GeekHub" FontSize="28"/>
 
-            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" FontWeight="Bold" TextWrapping="Wrap">
+            <TextBlock x:Uid="AboutVersion" Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" FontWeight="Bold" TextWrapping="Wrap">
                 <TextBlock.Text>
-                    GeekHub (version 1.0.26118.0)
+                    GeekHub (version 1.0.26119.0)
                 </TextBlock.Text>
             </TextBlock>
 
-            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
+            <TextBlock x:Uid="AboutDescription" Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
                 <TextBlock.Text>
                     Welcome to GeekHub, your central place for exploring projects, updates, and creative ideas all in one space. Here you can browse the latest builds, read fresh updates, and discover what's being worked on in real time. GeekHub is designed to keep everything organized and easy to access, so you can quickly jump between projects and stay up to date with new releases and features.
                 </TextBlock.Text>
             </TextBlock>
-            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
+            <TextBlock x:Uid="AboutNanoStore" Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
                 <TextBlock.Text>
                     NanoStore is a lightweight, mini app-store–style system originally developed by Alex and later merged into GeekHub through GitHub repositories. It is inspired by the concept of the Windows 8 Store, but designed in a much smaller and simpler form, focusing on fast browsing, easy installation, and lightweight distribution of apps or tools. Unlike full-scale marketplaces, NanoStore is intended for local or community-based use, making it suitable for small ecosystems where users can quickly access and manage applications without the complexity of a large commercial store.
                 </TextBlock.Text>
             </TextBlock>
-            
-            <TextBlock Style="{StaticResource BodyTextBlockStyle}" FontStyle="Italic" Margin="0,0,0,0" TextWrapping="Wrap">
+
+            <TextBlock x:Uid="AboutCredits" Style="{StaticResource BodyTextBlockStyle}" FontStyle="Italic" Margin="0,0,0,0" TextWrapping="Wrap">
                 <TextBlock.Text>
-                    Made by Andrew Simson (AndrewTheGeek)
+                    Made by Andrew Simson (AndrewTheGeek) and Xylo
                 </TextBlock.Text>
             </TextBlock>
-            <TextBlock Style="{StaticResource BodyTextBlockStyle}" FontStyle="Italic" Margin="0,0,0,0" TextWrapping="Wrap">
-                <TextBlock.Text>
-                    App updates by Xylo
-                </TextBlock.Text>
-            </TextBlock>
-            <TextBlock Style="{StaticResource BodyTextBlockStyle}" FontStyle="Italic" Margin="0,0,0,0" TextWrapping="Wrap">
+            <TextBlock x:Uid="AboutNanoCredit" Style="{StaticResource BodyTextBlockStyle}" FontStyle="Italic" Margin="0,0,0,0" TextWrapping="Wrap">
                 <TextBlock.Text>
                     NanoStore by Alex
                 </TextBlock.Text>

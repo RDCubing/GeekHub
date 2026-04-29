@@ -116,14 +116,26 @@
     {
       "Title": "ConverterCalculatorGUI",
       "Subtitle": "Scientific Calculator",
-      "Publisher":  "Andrew",
+      "Publisher": "Andrew",
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Assets/Logo.scale-100.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/calc.png",
       "AccentColor": "#000000",
       "Version": "1.0",
       "Description": "A lightweight Windows application combining a scientific calculator and a currency converter. Built in C# WinForms, it’s perfect for everyday calculations and quick currency conversions.",
-        "DownloadUrl": "https://github.com/RDCubing/ConverterCalculatorGUI/releases/download/1.0/ConverterCalculatorGUI_Installer.exe",
+      "DownloadUrl": "https://github.com/RDCubing/ConverterCalculatorGUI/releases/download/1.0/ConverterCalculatorGUI_Installer.exe",
       "SourceUrl": "https://github.com/RDCubing/ConverterCalculatorGUI"
+    },
+    {
+      "Title": "DrayMusic",
+      "Subtitle": "Listen online, with DrayMusic",
+      "Publisher":  "DraydenYT",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Assets/draymusic.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/draymusicfull.png",
+      "AccentColor": "#C12929",
+      "Version": "1.0.0.0",
+      "Description": "Listen online anytime, anywhere with DrayMusic and enjoy seamless access to your favorite tracks, curated playlists, and new music discoveries all in one place.",
+        "DownloadUrl": "https://raw.githubusercontent.com/draydenthemiiyt-maker/10-Store/main/files/1773704616_DrayMusic_1.0.0.0_AnyCPU.appx",
+      "SourceUrl": null
     }
   ]
 }

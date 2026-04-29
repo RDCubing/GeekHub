@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Popups;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -115,18 +116,15 @@ namespace GeekHub
 
             var picker = new Windows.Storage.Pickers.FileSavePicker();
             picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.Downloads;
-            picker.SuggestedFileName = project.Title;
+
             var uri = new Uri(project.DownloadUrl);
             string extension = System.IO.Path.GetExtension(uri.AbsolutePath);
 
-            // fallback if no extension
             if (string.IsNullOrEmpty(extension))
                 extension = ".bin";
 
-            // clean extension (just in case)
             extension = extension.ToLower();
 
-            // set filename + type
             picker.SuggestedFileName = project.Title;
             picker.FileTypeChoices.Add("File", new List<string> { extension });
 
@@ -137,6 +135,24 @@ namespace GeekHub
             var buffer = await client.GetBufferAsync(new Uri(project.DownloadUrl));
 
             await Windows.Storage.FileIO.WriteBufferAsync(file, buffer);
+
+            // ✅ Ask user before opening (MessageDialog version)
+            var dialog = new MessageDialog($"\"{file.Name}\" has been downloaded. Do you want to open it?");
+            dialog.Commands.Add(new UICommand("Open"));
+            dialog.Commands.Add(new UICommand("Cancel"));
+
+            var result = await dialog.ShowAsync();
+
+            if (result.Label == "Open")
+            {
+                bool success = await Windows.System.Launcher.LaunchFileAsync(file);
+
+                if (!success)
+                {
+                    var errorDialog = new MessageDialog("No app is associated with this file type.");
+                    await errorDialog.ShowAsync();
+                }
+            }
         }
 
         private async void ViewSource_Click(object sender, RoutedEventArgs e)

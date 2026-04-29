@@ -139,6 +139,7 @@
                     <TextBlock Grid.Row="0" VerticalAlignment="Center"
                Text="Top 1 App This Season"
                FontSize="36"
+                               x:Uid="Top1App"
                FontWeight="Light"
                Foreground="White"
                Margin="0,0,0,20"/>
@@ -215,6 +216,7 @@
                             <!-- Text -->
                             <TextBlock Text="Projects"
                FontSize="36"
+                                       x:Uid="ProjectsSection"
                FontWeight="Light"
                Foreground="White"
                VerticalAlignment="Center"/>
@@ -299,6 +301,7 @@
                     <!-- Title -->
                     <TextBlock Grid.Row="0"
                Text="Suggested"
+                               x:Uid="SuggestedSection"
                FontSize="36"
                FontWeight="Light"
                Foreground="White"
@@ -316,6 +319,7 @@
                             <!-- Title inside border -->
                             <TextBlock Text="Welcome to GeekHub!"
            FontSize="28"
+                                       x:Uid="SuggestedTitle"
            FontWeight="Light"
            Foreground="White"
            TextWrapping="Wrap"
@@ -325,6 +329,7 @@
                             <!-- Content inside border -->
                             <TextBlock Text="Welcome to GeekHub, your central place for exploring projects, updates, and creative ideas all in one space. Here you can browse the latest builds, read fresh updates, and discover what's being worked on in real time. GeekHub is designed to keep everything organized and easy to access, so you can quickly jump between projects and stay up to date with new releases and features."
            FontSize="16" Margin="0,0,0,12"
+                                       x:Uid="SuggestedContent"
            FontWeight="Light"
            Foreground="#CCFFFFFF"
            TextWrapping="Wrap"
@@ -335,7 +340,8 @@
            FontWeight="Light"
            Foreground="#CCFFFFFF"
            TextWrapping="Wrap"
-           LineHeight="22"/>
+           LineHeight="22"
+                                       x:Uid="SuggestedNano"/>
 
                         </StackPanel>
 
@@ -367,7 +373,8 @@
                FontSize="36"
                FontWeight="Light"
                Foreground="White"
-               VerticalAlignment="Center"/>
+               VerticalAlignment="Center"
+                                       x:Uid="News"/>
 
                             <!-- Chevron -->
                             <TextBlock Text="{StaticResource ChevronGlyph}"
@@ -437,7 +444,8 @@
                Margin="10"
                HorizontalAlignment="Left"
                VerticalAlignment="Bottom"
-               Opacity="0.8"/>
+               Opacity="0.8"
+                       x:Uid="Ad"/>
 
         </Grid>
     </Grid>

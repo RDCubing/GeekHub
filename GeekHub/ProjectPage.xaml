@@ -59,7 +59,7 @@
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+            <TextBlock x:Name="pageTitle"  Text="Projects" x:Uid="ProjectsPage" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
 
@@ -98,6 +98,7 @@
                         <!-- ABOUT (NOW UNDER IMAGE) -->
                         <TextBlock Text="About this project"
                            FontSize="26"
+                                   x:Uid="AboutProject"
                            FontWeight="Light"
                            Foreground="White"
                            Margin="0,0,0,10"/>
@@ -111,12 +112,13 @@
 
                     <!-- ACTIONS -->
                     <StackPanel Margin="0,0,30,0">
-                        <Button Content="Download"
+                        <Button
                         Padding="20,10"
+                                x:Uid="Download"
                         Margin="0,0,0,10"
                         Click="OpenProject_Click"/>
 
-                        <Button Content="View Source"
+                        <Button x:Uid="Source"
                         Padding="20,10"
                         Click="ViewSource_Click"/>
                     </StackPanel>
@@ -128,18 +130,19 @@
                FontSize="26"
                FontWeight="Light"
                Foreground="White"
-               Margin="0,0,0,10"/>
+               Margin="0,0,0,10"
+                                   x:Uid="Details"/>
 
-                        <TextBlock Text="Version:" Foreground="#888"/>
+                        <TextBlock x:Uid="Version" Text="Version:" Foreground="#888"/>
                         <TextBlock Text="{Binding Version}" Foreground="#CCC" Margin="0,0,0,10"/>
 
-                        <TextBlock Text="Publisher:" Foreground="#888"/>
+                        <TextBlock x:Uid="Publisher" Text="Publisher:" Foreground="#888"/>
                         <TextBlock Text="{Binding Publisher}" Foreground="#CCC" Margin="0,0,0,10"/>
 
-                        <TextBlock Text="Platform:" Foreground="#888"/>
+                        <TextBlock x:Uid="Platform" Text="Platform:" Foreground="#888"/>
                         <TextBlock Text="Windows" Foreground="#CCC" Margin="0,0,0,10"/>
 
-                        <TextBlock Text="Status:" Foreground="#888"/>
+                        <TextBlock x:Uid="Status" Text="Status:" Foreground="#888"/>
                         <TextBlock Text="Active Development" Foreground="#4CAF50"/>
 
                     </StackPanel>

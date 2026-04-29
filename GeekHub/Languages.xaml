@@ -1,0 +1,54 @@
+﻿<SettingsFlyout
+    x:Class="GeekHub.Languages"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GeekHub"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    IconSource="Assets/SmallLogo.png"
+    Title="Languages"
+    d:DesignWidth="346"
+    HeaderBackground="#FF545454">
+    <SettingsFlyout.Background>
+        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Color="#E9F0F3" Offset="0"/>
+            <GradientStop Color="#A2A5AC" Offset="1"/>
+        </LinearGradientBrush>
+    </SettingsFlyout.Background>
+
+    <!-- This StackPanel acts as a root panel for vertical layout of the content sections -->
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+
+        <!-- The StackPanel(s) below define individual content sections -->
+
+        <!-- Content Section 1-->
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+
+            <!-- Section 1 header -->
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" x:Uid="LanguageTitle" FontSize="28"/>
+
+            <!-- Section 1 body -->
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap" x:Uid="LanguageLabel"/>
+
+            <ComboBox x:Name="LanguageCombo"
+                  Margin="10,0,10,20"
+                  SelectionChanged="LanguageCombo_SelectionChanged">
+
+                <ComboBoxItem Tag="en-US">English</ComboBoxItem>
+                <ComboBoxItem Tag="fil-PH">Filipino</ComboBoxItem>
+
+            </ComboBox>
+            <!-- Info -->
+            <TextBlock x:Uid="LanguageInfo"
+                   Margin="10,10,10,0"
+                   Foreground="#666"
+                   TextWrapping="Wrap"/>
+
+
+        </StackPanel>
+
+        <!-- Define more Content Sections below as necessary -->
+
+    </StackPanel>
+</SettingsFlyout>

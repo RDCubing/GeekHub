@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutAppName.Text" xml:space="preserve">
+    <value>GeekHub</value>
+  </data>
+  <data name="AboutCredits.Text" xml:space="preserve">
+    <value>Ginawa nina Andrew Simson (AndrewTheGeek) at Xylo</value>
+  </data>
+  <data name="AboutDescription.Text" xml:space="preserve">
+    <value>Maligayang pagdating sa GeekHub, ang iyong sentrong lugar para sa paggalugad ng mga proyekto, update, at malikhaing ideya sa iisang lugar. Dito maaari mong tingnan ang mga pinakabagong builds, basahin ang mga bagong update, at alamin kung ano ang kasalukuyang ginagawa sa real time. Dinisenyo ang GeekHub upang mapanatiling organisado at madaling gamitin ang lahat, kaya mabilis kang makakapagpalipat-lipat ng mga proyekto at makakasabay sa mga bagong release at feature.</value>
+  </data>
+  <data name="AboutFlyout.Title" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutNanoCredit.Text" xml:space="preserve">
+    <value>NanoStore ni Alex</value>
+  </data>
+  <data name="AboutNanoStore.Text" xml:space="preserve">
+    <value>Ang NanoStore ay isang magaan at simpleng mini app-store system na orihinal na ginawa ni Alex at kalaunang isinama sa GeekHub sa pamamagitan ng GitHub repositories. Inspirado ito sa konsepto ng Windows 8 Store, ngunit mas maliit at mas simple, na nakatuon sa mabilis na pag-browse, madaling pag-install, at magaan na pamamahagi ng mga app o tool. Hindi tulad ng malalaking marketplace, ang NanoStore ay para sa lokal o community-based na paggamit.</value>
+  </data>
+  <data name="AboutProject.Text" xml:space="preserve">
+    <value>Tungkol sa proyektong ito</value>
+  </data>
+  <data name="AboutVersion.Text" xml:space="preserve">
+    <value>GeekHub (bersyon 1.0.26119.0)</value>
+  </data>
+  <data name="Ad.Text" xml:space="preserve">
+    <value>ADVERTISEMENT (ANUNSYO)</value>
+  </data>
+  <data name="Details.Text" xml:space="preserve">
+    <value>Mga Detalye</value>
+  </data>
+  <data name="Download.Content" xml:space="preserve">
+    <value>I-download</value>
+  </data>
+  <data name="GetStarted.Content" xml:space="preserve">
+    <value>Magsimula</value>
+  </data>
+  <data name="IntroducingNano.Text" xml:space="preserve">
+    <value>Panimula sa NanoStore</value>
+  </data>
+  <data name="LanguageFlyout.Title" xml:space="preserve">
+    <value>Wika</value>
+  </data>
+  <data name="LanguageInfo.Text" xml:space="preserve">
+    <value>Maaaring kailanganin i-restart ang app</value>
+  </data>
+  <data name="LanguageLabel.Text" xml:space="preserve">
+    <value>Pumili ng iyong wika</value>
+  </data>
+  <data name="LanguageTitle.Text" xml:space="preserve">
+    <value>Mga Setting ng Wika</value>
+  </data>
+  <data name="News.Text" xml:space="preserve">
+    <value>Pinakabagong Balita</value>
+  </data>
+  <data name="Platform.Text" xml:space="preserve">
+    <value>Platform:</value>
+  </data>
+  <data name="ProjectsList.Text" xml:space="preserve">
+    <value>Mga Proyekto</value>
+  </data>
+  <data name="ProjectsPage.Text" xml:space="preserve">
+    <value>Mga Proyekto</value>
+  </data>
+  <data name="ProjectsSection.Text" xml:space="preserve">
+    <value>Mga Proyekto</value>
+  </data>
+  <data name="Publisher.Text" xml:space="preserve">
+    <value>Publisher:</value>
+  </data>
+  <data name="Source.Content" xml:space="preserve">
+    <value>Tingnan ang Source</value>
+  </data>
+  <data name="Status.Text" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="SuggestedContent.Text" xml:space="preserve">
+    <value>Maligayang pagdating sa GeekHub, ang iyong sentrong lugar para sa paggalugad ng mga proyekto, update, at malikhaing ideya sa iisang lugar. Dito maaari mong tingnan ang mga pinakabagong builds, basahin ang mga bagong update, at alamin kung ano ang kasalukuyang ginagawa sa real time. Dinisenyo ang GeekHub upang mapanatiling organisado at madaling gamitin ang lahat, kaya mabilis kang makakapagpalipat-lipat ng mga proyekto at makakasabay sa mga bagong release at feature.</value>
+  </data>
+  <data name="SuggestedNano.Text" xml:space="preserve">
+    <value>Ang NanoStore ay isang magaan at simpleng mini app-store system na orihinal na ginawa ni Alex at kalaunang isinama sa GeekHub sa pamamagitan ng GitHub repositories. Inspirado ito sa konsepto ng Windows 8 Store, ngunit mas maliit at mas simple, na nakatuon sa mabilis na pag-browse, madaling pag-install, at magaan na pamamahagi ng mga app o tool. Hindi tulad ng malalaking marketplace, ang NanoStore ay para sa lokal o community-based na paggamit.</value>
+  </data>
+  <data name="SuggestedSection.Text" xml:space="preserve">
+    <value>Iminungkahi</value>
+  </data>
+  <data name="SuggestedTitle.Text" xml:space="preserve">
+    <value>Maligayang pagdating sa GeekHub!</value>
+  </data>
+  <data name="Top1App.Text" xml:space="preserve">
+    <value>Pinakamahusay na App ng Season na Ito</value>
+  </data>
+  <data name="Version.Text" xml:space="preserve">
+    <value>Bersyon:</value>
+  </data>
+  <data name="WelcomeNanoContent.Text" xml:space="preserve">
+    <value>Ang NanoStore ay isang magaan at simpleng mini app-store system na orihinal na ginawa ni Alex at kalaunang isinama sa GeekHub sa pamamagitan ng GitHub repositories. Inspirado ito sa konsepto ng Windows 8 Store, ngunit mas maliit at mas simple, na nakatuon sa mabilis na pag-browse, madaling pag-install, at magaan na pamamahagi ng mga app o tool. Hindi tulad ng malalaking marketplace, ang NanoStore ay para sa lokal o community-based na paggamit.</value>
+  </data>
+  <data name="WelcomeSub.Text" xml:space="preserve">
+    <value>Ang iyong mga app, proyekto, at update sa iisang lugar.</value>
+  </data>
+  <data name="WelcomeTitle.Text" xml:space="preserve">
+    <value>Maligayang pagdating sa GeekHub</value>
+  </data>
+</root>

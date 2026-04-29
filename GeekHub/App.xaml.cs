@@ -153,6 +153,11 @@ namespace GeekHub
                 })
             );
             args.Request.ApplicationCommands.Add(new Windows.UI.ApplicationSettings.SettingsCommand(
+                "languages",
+                "Languages",
+                handler => { new Languages().Show(); }
+            ));
+            args.Request.ApplicationCommands.Add(new Windows.UI.ApplicationSettings.SettingsCommand(
                 "about",
                 "About",
                 handler => { new About().Show(); }
