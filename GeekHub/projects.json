@@ -126,6 +126,18 @@
       "SourceUrl": "https://github.com/RDCubing/ConverterCalculatorGUI"
     },
     {
+      "Title": "GeekHub",
+      "Subtitle": "Your apps, projects, and updates in one place.",
+      "Publisher": "Andrew",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Assets/Logo.scale-100.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/geekhub.png",
+      "AccentColor": "#545454",
+      "Version": "1.1.26119.0",
+      "Description": "Welcome to GeekHub, your central place for exploring projects, updates, and creative ideas all in one space. Here you can browse the latest builds, read fresh updates, and discover what's being worked on in real time. GeekHub is designed to keep everything organized and easy to access, so you can quickly jump between projects and stay up to date with new releases and features.",
+      "DownloadUrl": "https://github.com/RDCubing/GeekHub/releases/download/1.1.26119.0/GeekHub_1.1.26119.0_AnyCPU.appxbundle",
+      "SourceUrl": "https://github.com/RDCubing/GeekHub"
+    },
+    {
       "Title": "DrayMusic",
       "Subtitle": "Listen online, with DrayMusic",
       "Publisher":  "DraydenYT",

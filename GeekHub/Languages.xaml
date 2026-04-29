@@ -38,8 +38,6 @@
                 <ComboBoxItem Tag="en-US">English</ComboBoxItem>
                 <ComboBoxItem Tag="fil-PH">Filipino</ComboBoxItem>
                 <ComboBoxItem Tag="ja-JP">日本語 (Japanese)</ComboBoxItem>
-                <ComboBoxItem Tag="ko-KR">한국어 (Korean)</ComboBoxItem>
-                <ComboBoxItem Tag="zh-CN">简体中文 (Chinese Simplified)</ComboBoxItem>
 
             </ComboBox>
             <!-- Info -->
@@ -65,16 +63,6 @@
             <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,0" TextWrapping="Wrap">
                 <TextBlock.Text>
                     Japanese: shuckkkers
-                </TextBlock.Text>
-            </TextBlock>
-            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,0" TextWrapping="Wrap">
-                <TextBlock.Text>
-                    Korean: shuckkkers
-                </TextBlock.Text>
-            </TextBlock>
-            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,0" TextWrapping="Wrap">
-                <TextBlock.Text>
-                    Chinese Simplified: Alex
                 </TextBlock.Text>
             </TextBlock>
 

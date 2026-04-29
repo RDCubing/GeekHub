@@ -139,8 +139,6 @@
     <None Include="GeekHub_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="projects.json" />
-    <PRIResource Include="Strings\zh-CN\Resources.resw" />
-    <PRIResource Include="Strings\ko-KR\Resources.resw" />
     <PRIResource Include="Strings\ja-JP\Resources.resw" />
     <PRIResource Include="Strings\fil-PH\Resources.resw" />
     <PRIResource Include="Strings\en-US\Resources.resw" />
@@ -190,6 +188,7 @@
     <Content Include="Images\chris.png" />
     <Content Include="Images\draymusic.png" />
     <Content Include="Images\draymusicfull.png" />
+    <Content Include="Images\geekhub.png" />
     <Content Include="Images\ltswide.png" />
     <Content Include="Images\lts.png" />
     <Content Include="Images\media.png" />
