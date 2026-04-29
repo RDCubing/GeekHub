@@ -121,102 +121,102 @@
     <value>GeekHub</value>
   </data>
   <data name="AboutCredits.Text" xml:space="preserve">
-    <value>Made by Andrew Simson (AndrewTheGeek) and Xylo</value>
+    <value>Andrew Simson（AndrewTheGeek）とXyloによって作成</value>
   </data>
   <data name="AboutDescription.Text" xml:space="preserve">
-    <value>Welcome to GeekHub, your central place for exploring projects, updates, and creative ideas all in one space. Here you can browse the latest builds, read fresh updates, and discover what's being worked on in real time. GeekHub is designed to keep everything organized and easy to access, so you can quickly jump between projects and stay up to date with new releases and features.</value>
+    <value>GeekHubへようこそ。ここはプロジェクト、アップデート、そしてクリエイティブなアイデアを一つの場所で探せる中心的な場所です。最新のビルドを閲覧したり、新しい更新情報を読んだり、現在進行中の内容をリアルタイムで確認できます。GeekHubはすべてを整理し、簡単にアクセスできるように設計されているため、プロジェクト間を素早く移動し、新しいリリースや機能を常に把握できます。</value>
   </data>
   <data name="AboutFlyout.Title" xml:space="preserve">
-    <value>About</value>
+    <value>バージョン情報</value>
   </data>
   <data name="AboutNanoCredit.Text" xml:space="preserve">
-    <value>NanoStore by Alex</value>
+    <value>NanoStore（Alexによる開発）</value>
   </data>
   <data name="AboutNanoStore.Text" xml:space="preserve">
-    <value>NanoStore is a lightweight, mini app-store–style system originally developed by Alex and later merged into GeekHub through GitHub repositories. It is inspired by the concept of the Windows 8 Store, but designed in a much smaller and simpler form, focusing on fast browsing, easy installation, and lightweight distribution of apps or tools. Unlike full-scale marketplaces, NanoStore is intended for local or community-based use.</value>
+    <value>NanoStoreは、もともとAlexによって開発され、後にGitHubリポジトリを通じてGeekHubに統合された軽量なミニアプリストアシステムです。Windows 8ストアのコンセプトに着想を得ていますが、より小さくシンプルに設計されており、高速なブラウジング、簡単なインストール、軽量な配布に重点を置いています。大規模なマーケットプレイスとは異なり、NanoStoreはローカルまたはコミュニティベースでの利用を目的としており、小規模な環境でアプリを簡単に管理・利用できます。</value>
   </data>
   <data name="AboutProject.Text" xml:space="preserve">
-    <value>About this project</value>
+    <value>このプロジェクトについて</value>
   </data>
   <data name="AboutVersion.Text" xml:space="preserve">
-    <value>GeekHub (version 1.1.26119.0)</value>
+    <value>GeekHub（バージョン 1.1.26119.0）</value>
   </data>
   <data name="Ad.Text" xml:space="preserve">
-    <value>ADVERTISEMENT</value>
+    <value>広告</value>
   </data>
   <data name="Details.Text" xml:space="preserve">
-    <value>Details</value>
+    <value>詳細</value>
   </data>
   <data name="Download.Content" xml:space="preserve">
-    <value>Download</value>
+    <value>ダウンロード</value>
   </data>
   <data name="GetStarted.Content" xml:space="preserve">
-    <value>Get Started</value>
+    <value>はじめる</value>
   </data>
   <data name="IntroducingNano.Text" xml:space="preserve">
-    <value>Introducing NanoStore</value>
+    <value>NanoStoreの紹介</value>
   </data>
   <data name="LanguageFlyout.Title" xml:space="preserve">
-    <value>Language</value>
+    <value>言語</value>
   </data>
   <data name="LanguageInfo.Text" xml:space="preserve">
-    <value>Changes may require restarting the app</value>
+    <value>変更を適用するにはアプリの再起動が必要な場合があります</value>
   </data>
   <data name="LanguageLabel.Text" xml:space="preserve">
-    <value>Select your language</value>
+    <value>言語を選択してください</value>
   </data>
   <data name="LanguageTitle.Text" xml:space="preserve">
-    <value>Language Settings</value>
+    <value>言語設定</value>
   </data>
   <data name="News.Text" xml:space="preserve">
-    <value>Latest News</value>
+    <value>最新ニュース</value>
   </data>
   <data name="Platform.Text" xml:space="preserve">
-    <value>Platform:</value>
+    <value>プラットフォーム：</value>
   </data>
   <data name="ProjectsList.Text" xml:space="preserve">
-    <value>Projects</value>
+    <value>プロジェクト</value>
   </data>
   <data name="ProjectsPage.Text" xml:space="preserve">
-    <value>Projects</value>
+    <value>プロジェクト</value>
   </data>
   <data name="ProjectsSection.Text" xml:space="preserve">
-    <value>Projects</value>
+    <value>プロジェクト</value>
   </data>
   <data name="Publisher.Text" xml:space="preserve">
-    <value>Publisher:</value>
+    <value>発行元：</value>
   </data>
   <data name="Source.Content" xml:space="preserve">
-    <value>View Source</value>
+    <value>ソースを見る</value>
   </data>
   <data name="Status.Text" xml:space="preserve">
-    <value>Status:</value>
+    <value>ステータス：</value>
   </data>
   <data name="SuggestedContent.Text" xml:space="preserve">
-    <value>Welcome to GeekHub, your central place for exploring projects, updates, and creative ideas all in one space. Here you can browse the latest builds, read fresh updates, and discover what's being worked on in real time. GeekHub is designed to keep everything organized and easy to access, so you can quickly jump between projects and stay up to date with new releases and features.</value>
+    <value>GeekHubへようこそ。ここはプロジェクト、アップデート、そしてクリエイティブなアイデアを一つの場所で探せる中心的な場所です。最新のビルドを閲覧したり、新しい更新情報を読んだり、現在進行中の内容をリアルタイムで確認できます。GeekHubはすべてを整理し、簡単にアクセスできるように設計されているため、プロジェクト間を素早く移動し、新しいリリースや機能を常に把握できます。</value>
   </data>
   <data name="SuggestedNano.Text" xml:space="preserve">
-    <value>NanoStore is a lightweight, mini app-store–style system originally developed by Alex and later merged into GeekHub through GitHub repositories. It is inspired by the concept of the Windows 8 Store, but designed in a much smaller and simpler form, focusing on fast browsing, easy installation, and lightweight distribution of apps or tools. Unlike full-scale marketplaces, NanoStore is intended for local or community-based use.</value>
+    <value>NanoStoreは、もともとAlexによって開発され、後にGitHubリポジトリを通じてGeekHubに統合された軽量なミニアプリストアシステムです。Windows 8ストアのコンセプトに着想を得ていますが、より小さくシンプルに設計されており、高速なブラウジング、簡単なインストール、軽量な配布に重点を置いています。大規模なマーケットプレイスとは異なり、NanoStoreはローカルまたはコミュニティベースでの利用を目的としており、小規模な環境でアプリを簡単に管理・利用できます。</value>
   </data>
   <data name="SuggestedSection.Text" xml:space="preserve">
-    <value>Suggested</value>
+    <value>おすすめ</value>
   </data>
   <data name="SuggestedTitle.Text" xml:space="preserve">
-    <value>Welcome to GeekHub!</value>
+    <value>GeekHubへようこそ！</value>
   </data>
   <data name="Top1App.Text" xml:space="preserve">
-    <value>Top 1 App This Season</value>
+    <value>今シーズンのトップアプリ</value>
   </data>
   <data name="Version.Text" xml:space="preserve">
-    <value>Version:</value>
+    <value>バージョン：</value>
   </data>
   <data name="WelcomeNanoContent.Text" xml:space="preserve">
-    <value>NanoStore is a lightweight, mini app-store–style system originally developed by Alex and later merged into GeekHub through GitHub repositories. It is inspired by the concept of the Windows 8 Store, but designed in a much smaller and simpler form, focusing on fast browsing, easy installation, and lightweight distribution of apps or tools. Unlike full-scale marketplaces, NanoStore is intended for local or community-based use.</value>
+    <value>NanoStoreは、もともとAlexによって開発され、後にGitHubリポジトリを通じてGeekHubに統合された軽量なミニアプリストアシステムです。Windows 8ストアのコンセプトに着想を得ていますが、より小さくシンプルに設計されており、高速なブラウジング、簡単なインストール、軽量な配布に重点を置いています。大規模なマーケットプレイスとは異なり、NanoStoreはローカルまたはコミュニティベースでの利用を目的としており、小規模な環境でアプリを簡単に管理・利用できます。</value>
   </data>
   <data name="WelcomeSub.Text" xml:space="preserve">
-    <value>Your apps, projects, and updates in one place.</value>
+    <value>あなたのアプリ、プロジェクト、アップデートを一か所に。</value>
   </data>
   <data name="WelcomeTitle.Text" xml:space="preserve">
-    <value>Welcome to GeekHub</value>
+    <value>GeekHubへようこそ</value>
   </data>
 </root>

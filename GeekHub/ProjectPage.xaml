@@ -22,18 +22,22 @@
     -->
     <Grid>
         <Grid.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
 
-                <GradientStop Color="#661E3C72" Offset="0.0"/>
-                <!-- deep blue (transparent) -->
-                <GradientStop Color="#662A5298" Offset="0.25"/>
-                <!-- blue -->
-                <GradientStop Color="#666A11CB" Offset="0.5"/>
-                <!-- purple -->
-                <GradientStop Color="#662575FC" Offset="0.75"/>
-                <!-- bright blue -->
-                <GradientStop Color="#6600C6FF" Offset="1.0"/>
-                <!-- cyan -->
+                <GradientStop Color="#FF1C1B33" Offset="0.0"/>
+                <!-- deep midnight violet -->
+
+                <GradientStop Color="#FF3A1C40" Offset="0.25"/>
+                <!-- dark wine -->
+
+                <GradientStop Color="#FF6D2E46" Offset="0.5"/>
+                <!-- muted crimson -->
+
+                <GradientStop Color="#FFB04A3A" Offset="0.75"/>
+                <!-- warm copper -->
+
+                <GradientStop Color="#FFF2A65A" Offset="1.0"/>
+                <!-- soft amber glow -->
 
             </LinearGradientBrush>
         </Grid.Background>
@@ -74,73 +78,72 @@
             <Grid>
                 <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Margin="40">
+                    VerticalAlignment="Top"
+                    Margin="50">
 
-                    <!-- LEFT SIDE (Hero + About) -->
-                    <StackPanel Width="500" Margin="0,0,30,0">
+                    <!-- MAIN CONTENT (LARGE FOCUS) -->
+                    <StackPanel Width="650" Margin="0,0,40,0">
 
                         <!-- HERO -->
-                        <Grid Height="320" Margin="0,0,0,20">
+                        <Grid Height="360" Margin="0,0,0,25">
                             <Image Source="{Binding LocalDetailImage}" Stretch="UniformToFill"/>
                             <Rectangle Fill="#66000000"/>
-                            <StackPanel VerticalAlignment="Bottom" Margin="20">
+
+                            <StackPanel VerticalAlignment="Bottom" Margin="22">
                                 <TextBlock Text="{Binding Title}"
-                                   FontSize="40"
+                                   FontSize="48"
                                    FontWeight="Light"
                                    Foreground="White"/>
+
                                 <TextBlock Text="{Binding Subtitle}"
-                                   FontSize="18"
+                                   FontSize="22"
                                    Foreground="#DDFFFFFF"/>
                             </StackPanel>
                         </Grid>
 
-                        <!-- ABOUT (NOW UNDER IMAGE) -->
+                        <!-- ABOUT -->
                         <TextBlock Text="About this project"
-                           FontSize="26"
-                                   x:Uid="AboutProject"
+                           FontSize="32"
+                           x:Uid="AboutProject"
                            FontWeight="Light"
                            Foreground="White"
-                           Margin="0,0,0,10"/>
+                           Margin="0,0,0,12"/>
 
                         <TextBlock Text="{Binding Description}"
-                           FontSize="16"
+                           FontSize="18"
                            Foreground="#CCCCCC"
                            TextWrapping="Wrap"/>
 
                     </StackPanel>
 
-                    <!-- ACTIONS -->
-                    <StackPanel Margin="0,0,30,0">
-                        <Button
-                        Padding="20,10"
-                                x:Uid="Download"
-                        Margin="0,0,0,10"
+                    <!-- SIDE PANEL (DETAILS + ACTIONS) -->
+                    <StackPanel Width="320" VerticalAlignment="Top">
+
+                        <Button Padding="26,14"
+                        x:Uid="Download"
+                        Margin="0,0,0,14"
                         Click="OpenProject_Click"/>
 
                         <Button x:Uid="Source"
-                        Padding="20,10"
+                        Padding="26,14"
+                        Margin="0,0,0,30"
                         Click="ViewSource_Click"/>
-                    </StackPanel>
-
-                    <!-- DETAILS -->
-                    <StackPanel Width="300">
 
                         <TextBlock Text="Details"
-               FontSize="26"
-               FontWeight="Light"
-               Foreground="White"
-               Margin="0,0,0,10"
-                                   x:Uid="Details"/>
+                           FontSize="30"
+                           FontWeight="Light"
+                           Foreground="White"
+                           Margin="0,0,0,15"
+                           x:Uid="Details"/>
 
                         <TextBlock x:Uid="Version" Text="Version:" Foreground="#888"/>
-                        <TextBlock Text="{Binding Version}" Foreground="#CCC" Margin="0,0,0,10"/>
+                        <TextBlock Text="{Binding Version}" Foreground="#CCC" Margin="0,0,0,12"/>
 
                         <TextBlock x:Uid="Publisher" Text="Publisher:" Foreground="#888"/>
-                        <TextBlock Text="{Binding Publisher}" Foreground="#CCC" Margin="0,0,0,10"/>
+                        <TextBlock Text="{Binding Publisher}" Foreground="#CCC" Margin="0,0,0,12"/>
 
                         <TextBlock x:Uid="Platform" Text="Platform:" Foreground="#888"/>
-                        <TextBlock Text="Windows" Foreground="#CCC" Margin="0,0,0,10"/>
+                        <TextBlock Text="Windows" Foreground="#CCC" Margin="0,0,0,12"/>
 
                         <TextBlock x:Uid="Status" Text="Status:" Foreground="#888"/>
                         <TextBlock Text="Active Development" Foreground="#4CAF50"/>

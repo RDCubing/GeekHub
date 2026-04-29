@@ -121,102 +121,102 @@
     <value>GeekHub</value>
   </data>
   <data name="AboutCredits.Text" xml:space="preserve">
-    <value>Made by Andrew Simson (AndrewTheGeek) and Xylo</value>
+    <value>由 Andrew Simson（AndrewTheGeek）和 Xylo 制作</value>
   </data>
   <data name="AboutDescription.Text" xml:space="preserve">
-    <value>Welcome to GeekHub, your central place for exploring projects, updates, and creative ideas all in one space. Here you can browse the latest builds, read fresh updates, and discover what's being worked on in real time. GeekHub is designed to keep everything organized and easy to access, so you can quickly jump between projects and stay up to date with new releases and features.</value>
+    <value>欢迎来到 GeekHub，这是一个用于探索项目、更新和创意想法的集中平台。在这里你可以浏览最新构建版本、阅读更新内容，并实时了解正在开发的内容。GeekHub 旨在让所有内容井然有序并易于访问，让你可以快速切换项目并随时掌握新版本和新功能。</value>
   </data>
   <data name="AboutFlyout.Title" xml:space="preserve">
-    <value>About</value>
+    <value>关于</value>
   </data>
   <data name="AboutNanoCredit.Text" xml:space="preserve">
-    <value>NanoStore by Alex</value>
+    <value>NanoStore 由 Alex 开发</value>
   </data>
   <data name="AboutNanoStore.Text" xml:space="preserve">
-    <value>NanoStore is a lightweight, mini app-store–style system originally developed by Alex and later merged into GeekHub through GitHub repositories. It is inspired by the concept of the Windows 8 Store, but designed in a much smaller and simpler form, focusing on fast browsing, easy installation, and lightweight distribution of apps or tools. Unlike full-scale marketplaces, NanoStore is intended for local or community-based use.</value>
+    <value>NanoStore 是一个轻量级迷你应用商店系统，最初由 Alex 开发，后来通过 GitHub 仓库整合到 GeekHub 中。它借鉴了 Windows 8 应用商店的概念，但设计更加小巧简洁，专注于快速浏览、轻松安装以及轻量级应用或工具分发。与大型应用市场不同，NanoStore 更适用于本地或社区环境。</value>
   </data>
   <data name="AboutProject.Text" xml:space="preserve">
-    <value>About this project</value>
+    <value>关于此项目</value>
   </data>
   <data name="AboutVersion.Text" xml:space="preserve">
-    <value>GeekHub (version 1.1.26119.0)</value>
+    <value>GeekHub（版本 1.1.26119.0）</value>
   </data>
   <data name="Ad.Text" xml:space="preserve">
-    <value>ADVERTISEMENT</value>
+    <value>广告</value>
   </data>
   <data name="Details.Text" xml:space="preserve">
-    <value>Details</value>
+    <value>详情</value>
   </data>
   <data name="Download.Content" xml:space="preserve">
-    <value>Download</value>
+    <value>下载</value>
   </data>
   <data name="GetStarted.Content" xml:space="preserve">
-    <value>Get Started</value>
+    <value>开始使用</value>
   </data>
   <data name="IntroducingNano.Text" xml:space="preserve">
-    <value>Introducing NanoStore</value>
+    <value>介绍 NanoStore</value>
   </data>
   <data name="LanguageFlyout.Title" xml:space="preserve">
-    <value>Language</value>
+    <value>语言</value>
   </data>
   <data name="LanguageInfo.Text" xml:space="preserve">
-    <value>Changes may require restarting the app</value>
+    <value>更改可能需要重启应用</value>
   </data>
   <data name="LanguageLabel.Text" xml:space="preserve">
-    <value>Select your language</value>
+    <value>选择你的语言</value>
   </data>
   <data name="LanguageTitle.Text" xml:space="preserve">
-    <value>Language Settings</value>
+    <value>语言设置</value>
   </data>
   <data name="News.Text" xml:space="preserve">
-    <value>Latest News</value>
+    <value>最新新闻</value>
   </data>
   <data name="Platform.Text" xml:space="preserve">
-    <value>Platform:</value>
+    <value>平台：</value>
   </data>
   <data name="ProjectsList.Text" xml:space="preserve">
-    <value>Projects</value>
+    <value>项目</value>
   </data>
   <data name="ProjectsPage.Text" xml:space="preserve">
-    <value>Projects</value>
+    <value>项目</value>
   </data>
   <data name="ProjectsSection.Text" xml:space="preserve">
-    <value>Projects</value>
+    <value>项目</value>
   </data>
   <data name="Publisher.Text" xml:space="preserve">
-    <value>Publisher:</value>
+    <value>发布者：</value>
   </data>
   <data name="Source.Content" xml:space="preserve">
-    <value>View Source</value>
+    <value>查看源代码</value>
   </data>
   <data name="Status.Text" xml:space="preserve">
-    <value>Status:</value>
+    <value>状态：</value>
   </data>
   <data name="SuggestedContent.Text" xml:space="preserve">
-    <value>Welcome to GeekHub, your central place for exploring projects, updates, and creative ideas all in one space. Here you can browse the latest builds, read fresh updates, and discover what's being worked on in real time. GeekHub is designed to keep everything organized and easy to access, so you can quickly jump between projects and stay up to date with new releases and features.</value>
+    <value>欢迎来到 GeekHub，这是一个用于探索项目、更新和创意想法的集中平台。在这里你可以浏览最新构建版本、阅读更新内容，并实时了解正在开发的内容。GeekHub 旨在让所有内容井然有序并易于访问，让你可以快速切换项目并随时掌握新版本和新功能。</value>
   </data>
   <data name="SuggestedNano.Text" xml:space="preserve">
-    <value>NanoStore is a lightweight, mini app-store–style system originally developed by Alex and later merged into GeekHub through GitHub repositories. It is inspired by the concept of the Windows 8 Store, but designed in a much smaller and simpler form, focusing on fast browsing, easy installation, and lightweight distribution of apps or tools. Unlike full-scale marketplaces, NanoStore is intended for local or community-based use.</value>
+    <value>NanoStore 是一个轻量级迷你应用商店系统，最初由 Alex 开发，后来通过 GitHub 仓库整合到 GeekHub 中。它借鉴了 Windows 8 应用商店的概念，但设计更加小巧简洁，专注于快速浏览、轻松安装以及轻量级应用或工具分发。与大型应用市场不同，NanoStore 更适用于本地或社区环境。</value>
   </data>
   <data name="SuggestedSection.Text" xml:space="preserve">
-    <value>Suggested</value>
+    <value>推荐</value>
   </data>
   <data name="SuggestedTitle.Text" xml:space="preserve">
-    <value>Welcome to GeekHub!</value>
+    <value>欢迎来到 GeekHub！</value>
   </data>
   <data name="Top1App.Text" xml:space="preserve">
-    <value>Top 1 App This Season</value>
+    <value>本季最佳应用</value>
   </data>
   <data name="Version.Text" xml:space="preserve">
-    <value>Version:</value>
+    <value>版本：</value>
   </data>
   <data name="WelcomeNanoContent.Text" xml:space="preserve">
-    <value>NanoStore is a lightweight, mini app-store–style system originally developed by Alex and later merged into GeekHub through GitHub repositories. It is inspired by the concept of the Windows 8 Store, but designed in a much smaller and simpler form, focusing on fast browsing, easy installation, and lightweight distribution of apps or tools. Unlike full-scale marketplaces, NanoStore is intended for local or community-based use.</value>
+    <value>NanoStore 是一个轻量级迷你应用商店系统，最初由 Alex 开发，后来通过 GitHub 仓库整合到 GeekHub 中。它借鉴了 Windows 8 应用商店的概念，但设计更加小巧简洁，专注于快速浏览、轻松安装以及轻量级应用或工具分发。与大型应用市场不同，NanoStore 更适用于本地或社区环境。</value>
   </data>
   <data name="WelcomeSub.Text" xml:space="preserve">
-    <value>Your apps, projects, and updates in one place.</value>
+    <value>你的应用、项目和更新集中在一个地方。</value>
   </data>
   <data name="WelcomeTitle.Text" xml:space="preserve">
-    <value>Welcome to GeekHub</value>
+    <value>欢迎来到 GeekHub</value>
   </data>
 </root>

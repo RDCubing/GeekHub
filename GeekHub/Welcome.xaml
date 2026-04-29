@@ -42,12 +42,23 @@
 
         <!-- BACKGROUND -->
         <Grid.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                <GradientStop Color="#661E3C72" Offset="0.0"/>
-                <GradientStop Color="#662A5298" Offset="0.25"/>
-                <GradientStop Color="#666A11CB" Offset="0.5"/>
-                <GradientStop Color="#662575FC" Offset="0.75"/>
-                <GradientStop Color="#6600C6FF" Offset="1.0"/>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+
+                <GradientStop Color="#FF1C1B33" Offset="0.0"/>
+                <!-- deep midnight violet -->
+
+                <GradientStop Color="#FF3A1C40" Offset="0.25"/>
+                <!-- dark wine -->
+
+                <GradientStop Color="#FF6D2E46" Offset="0.5"/>
+                <!-- muted crimson -->
+
+                <GradientStop Color="#FFB04A3A" Offset="0.75"/>
+                <!-- warm copper -->
+
+                <GradientStop Color="#FFF2A65A" Offset="1.0"/>
+                <!-- soft amber glow -->
+
             </LinearGradientBrush>
         </Grid.Background>
 

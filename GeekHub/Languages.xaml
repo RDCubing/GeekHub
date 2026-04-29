@@ -32,18 +32,51 @@
             <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap" x:Uid="LanguageLabel"/>
 
             <ComboBox x:Name="LanguageCombo"
-                  Margin="10,0,10,20"
+                  Margin="0,0,10,20"
                   SelectionChanged="LanguageCombo_SelectionChanged">
 
                 <ComboBoxItem Tag="en-US">English</ComboBoxItem>
                 <ComboBoxItem Tag="fil-PH">Filipino</ComboBoxItem>
+                <ComboBoxItem Tag="ja-JP">日本語 (Japanese)</ComboBoxItem>
+                <ComboBoxItem Tag="ko-KR">한국어 (Korean)</ComboBoxItem>
+                <ComboBoxItem Tag="zh-CN">简体中文 (Chinese Simplified)</ComboBoxItem>
 
             </ComboBox>
             <!-- Info -->
             <TextBlock x:Uid="LanguageInfo"
-                   Margin="10,10,10,0"
+                   Margin="0,10,10,0"
                    Foreground="#666"
                    TextWrapping="Wrap"/>
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
+                <TextBlock.Text>
+                    Special thanks to these people who helped translate GeekHub!
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,0" TextWrapping="Wrap">
+                <TextBlock.Text>
+                    English: AndrewTheGeek
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,0" TextWrapping="Wrap">
+                <TextBlock.Text>
+                    Filipino: AndrewTheGeek
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,0" TextWrapping="Wrap">
+                <TextBlock.Text>
+                    Japanese: shuckkkers
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,0" TextWrapping="Wrap">
+                <TextBlock.Text>
+                    Korean: shuckkkers
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,0" TextWrapping="Wrap">
+                <TextBlock.Text>
+                    Chinese Simplified: Alex
+                </TextBlock.Text>
+            </TextBlock>
 
 
         </StackPanel>
