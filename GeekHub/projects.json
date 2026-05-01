@@ -126,6 +126,18 @@
       "SourceUrl": "https://github.com/RDCubing/ConverterCalculatorGUI"
     },
     {
+      "Title": "Aero Quotes",
+      "Subtitle": "Quotes, Aerofied",
+      "Publisher": "ChrisRLillo",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/AeroQuotes_glass_ico.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/glass.png",
+      "AccentColor": "#99daff",
+      "Version": "Release 1",
+      "Description": "This app displays a quote in an Aero Glass–style window using your system’s accent color or Mica effect, and fetches quotes from the Quotable API. It’s written in AutoHotkey v2.",
+      "DownloadUrl": "https://raw.githubusercontent.com/RDCubing/chrisrlillo-music-assets/main/programs/Aero%20Quotes.exe",
+      "SourceUrl": null
+    },
+    {
       "Title": "GeekHub",
       "Subtitle": "Your apps, projects, and updates in one place.",
       "Publisher": "Andrew",

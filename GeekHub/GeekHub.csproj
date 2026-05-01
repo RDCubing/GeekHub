@@ -178,6 +178,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-80.png" />
     <Content Include="Audio\song04.mp3" />
     <Content Include="Images\650x90.png" />
+    <Content Include="Images\AeroQuotes_glass_ico.png" />
     <Content Include="Images\calc.png" />
     <Content Include="Images\feed.png" />
     <Content Include="Images\1.png" />
@@ -189,6 +190,7 @@
     <Content Include="Images\draymusic.png" />
     <Content Include="Images\draymusicfull.png" />
     <Content Include="Images\geekhub.png" />
+    <Content Include="Images\glass.png" />
     <Content Include="Images\ltswide.png" />
     <Content Include="Images\lts.png" />
     <Content Include="Images\media.png" />
