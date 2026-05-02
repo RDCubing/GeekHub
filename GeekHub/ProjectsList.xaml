@@ -24,20 +24,20 @@
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
 
-                <GradientStop Color="#FF1C1B33" Offset="0.0"/>
-                <!-- deep midnight violet -->
+                <GradientStop Color="#FF141326" Offset="0.0"/>
+                <!-- deep dark indigo -->
 
-                <GradientStop Color="#FF3A1C40" Offset="0.25"/>
-                <!-- dark wine -->
+                <GradientStop Color="#FF2A1833" Offset="0.25"/>
+                <!-- muted plum -->
 
-                <GradientStop Color="#FF6D2E46" Offset="0.5"/>
-                <!-- muted crimson -->
+                <GradientStop Color="#FF3E2238" Offset="0.5"/>
+                <!-- soft wine -->
 
-                <GradientStop Color="#FFB04A3A" Offset="0.75"/>
-                <!-- warm copper -->
+                <GradientStop Color="#FF5A2F36" Offset="0.75"/>
+                <!-- dim copper -->
 
-                <GradientStop Color="#FFF2A65A" Offset="1.0"/>
-                <!-- soft amber glow -->
+                <GradientStop Color="#FF7A4A3A" Offset="1.0"/>
+                <!-- toned-down amber -->
 
             </LinearGradientBrush>
         </Grid.Background>
@@ -85,8 +85,7 @@
                     <!-- ✅ Horizontal + only 2 rows -->
                     <GridView.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <ItemsWrapGrid Orientation="Vertical"
-                           MaximumRowsOrColumns="3"/>
+                            <ItemsWrapGrid Orientation="Vertical"/>
                         </ItemsPanelTemplate>
                     </GridView.ItemsPanel>
 
@@ -94,18 +93,18 @@
                         <DataTemplate>
 
                             <!-- ✅ Bigger item -->
-                            <Grid Height="160" Width="420" Margin="0,0,20,20">
+                            <Grid Height="125" Width="375" Margin="10">
 
                                 <Grid.ColumnDefinitions>
                                     <!-- ✅ square image -->
-                                    <ColumnDefinition Width="160"/>
+                                    <ColumnDefinition Width="125"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
                                 <!-- Image -->
                                 <Border Grid.Column="0"
-                        Width="160"
-                        Height="160">
+                        Width="125"
+                        Height="125">
 
                                     <Image Source="{Binding LocalImage}"
                            Stretch="UniformToFill"/>

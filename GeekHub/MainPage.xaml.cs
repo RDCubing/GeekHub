@@ -98,7 +98,8 @@ namespace GeekHub
                             AccentBrush = new SolidColorBrush(HexToColor(p.AccentColor)),
                             DownloadUrl = p.DownloadUrl,
                             SourceUrl = p.SourceUrl,
-                            ImagePath = p.ImagePath
+                            ImagePath = p.ImagePath,
+                            Framework = p.Framework
                         };
 
                         project.LocalImage = await DownloadImageAsync(p.ImagePath, $"{p.Title}_icon.png");
@@ -511,6 +512,7 @@ namespace GeekHub
         public string SourceUrl { get; set; }
         public string ImagePath { get; set; }
         public string Publisher { get; set; }
+        public string Framework { get; set; }
     }
 
     public class ProjectDto
@@ -525,6 +527,7 @@ namespace GeekHub
         public string DownloadUrl { get; set; }
         public string SourceUrl { get; set; }
         public string Publisher { get; set; }
+        public string Framework { get; set; }
     }
 
     public class ProjectFeed

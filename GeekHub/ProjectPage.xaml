@@ -24,20 +24,20 @@
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
 
-                <GradientStop Color="#FF1C1B33" Offset="0.0"/>
-                <!-- deep midnight violet -->
+                <GradientStop Color="#FF141326" Offset="0.0"/>
+                <!-- deep dark indigo -->
 
-                <GradientStop Color="#FF3A1C40" Offset="0.25"/>
-                <!-- dark wine -->
+                <GradientStop Color="#FF2A1833" Offset="0.25"/>
+                <!-- muted plum -->
 
-                <GradientStop Color="#FF6D2E46" Offset="0.5"/>
-                <!-- muted crimson -->
+                <GradientStop Color="#FF3E2238" Offset="0.5"/>
+                <!-- soft wine -->
 
-                <GradientStop Color="#FFB04A3A" Offset="0.75"/>
-                <!-- warm copper -->
+                <GradientStop Color="#FF5A2F36" Offset="0.75"/>
+                <!-- dim copper -->
 
-                <GradientStop Color="#FFF2A65A" Offset="1.0"/>
-                <!-- soft amber glow -->
+                <GradientStop Color="#FF7A4A3A" Offset="1.0"/>
+                <!-- toned-down amber -->
 
             </LinearGradientBrush>
         </Grid.Background>
@@ -110,7 +110,7 @@
                            Margin="0,0,0,12"/>
 
                         <TextBlock Text="{Binding Description}"
-                           FontSize="18"
+                           FontSize="12"
                            Foreground="#CCCCCC"
                            TextWrapping="Wrap"/>
 
@@ -143,7 +143,7 @@
                         <TextBlock Text="{Binding Publisher}" Foreground="#CCC" Margin="0,0,0,12"/>
 
                         <TextBlock x:Uid="Platform" Text="Platform:" Foreground="#888"/>
-                        <TextBlock Text="Windows" Foreground="#CCC" Margin="0,0,0,12"/>
+                        <TextBlock Text="{Binding Framework}" Foreground="#CCC" Margin="0,0,0,12"/>
 
                         <TextBlock x:Uid="Status" Text="Status:" Foreground="#888"/>
                         <TextBlock Text="Active Development" Foreground="#4CAF50"/>
