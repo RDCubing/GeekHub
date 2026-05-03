@@ -191,11 +191,13 @@
     <Content Include="Images\draymusicfull.png" />
     <Content Include="Images\geekhub.png" />
     <Content Include="Images\glass.png" />
+    <Content Include="Images\qphone.png" />
     <Content Include="Images\ltswide.png" />
     <Content Include="Images\lts.png" />
     <Content Include="Images\media.png" />
     <Content Include="Images\mp3.png" />
     <Content Include="Images\q.png" />
+    <Content Include="Images\qphone2.png" />
     <Content Include="Images\quote.png" />
     <Content Include="Images\rlillo.png" />
     <Content Include="TextFile1.txt" />

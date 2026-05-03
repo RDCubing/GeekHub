@@ -3,7 +3,7 @@
     {
       "Title": "QuoteTile",
       "Subtitle": "Seek inspiration from quotes",
-      "Publisher":  "Andrew Simson",
+      "Publisher": "Andrew Simson",
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/q.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/quote.png",
       "AccentColor": "#0D47A1",
@@ -12,6 +12,19 @@
       "Description": "QuoteTile is a simple app that shows inspiring quotes. Refresh quotes anytime, copy quotes to clipboard with one click, and share quotes anywhere.",
       "DownloadUrl": "https://github.com/RDCubing/QuoteTileMain/releases/download/2.1.3.0/QuoteTileMain_2.1.3.0_AnyCPU.appx",
       "SourceUrl": "https://github.com/RDCubing/QuoteTileMain"
+    },
+    {
+      "Title": "QuoteTileWP8",
+      "Subtitle": "Seek inspiration from quotes",
+      "Publisher":  "Andrew",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/qphone.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/qphone2.png",
+      "AccentColor": "#1f4e79",
+      "Version": "1.0.26123.0",
+      "Framework": "Windows Phone 8.1",
+      "Description": "QuoteTile is a simple app that shows inspiring quotes. Refresh quotes anytime you like. Save your favorites and build your personal collection.",
+      "DownloadUrl": "https://github.com/RDCubing/QuoteTileWP8/releases/download/1.0.26123.0/QuoteTileWP8_1.0.26123.0_AnyCPU.appx",
+      "SourceUrl": "https://github.com/RDCubing/QuoteTileWP8"
     },
     {
       "Title": "QuoteTile LTS",
