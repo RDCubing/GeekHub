@@ -14,19 +14,6 @@
       "SourceUrl": "https://github.com/RDCubing/QuoteTileMain"
     },
     {
-      "Title": "QuoteTileWP8",
-      "Subtitle": "Seek inspiration from quotes",
-      "Publisher":  "Andrew",
-      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/qphone.png",
-      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/qphone2.png",
-      "AccentColor": "#1f4e79",
-      "Version": "1.0.26123.0",
-      "Framework": "Windows Phone 8.1",
-      "Description": "QuoteTile is a simple app that shows inspiring quotes. Refresh quotes anytime you like. Save your favorites and build your personal collection.",
-      "DownloadUrl": "https://github.com/RDCubing/QuoteTileWP8/releases/download/1.0.26123.0/QuoteTileWP8_1.0.26123.0_AnyCPU.appx",
-      "SourceUrl": "https://github.com/RDCubing/QuoteTileWP8"
-    },
-    {
       "Title": "QuoteTile LTS",
       "Subtitle": "Seek inspiration from quotes",
       "Publisher":  "Andrew Simson",
@@ -135,6 +122,20 @@
       "DownloadUrl": "https://github.com/RDCubing/ChrisRLillo-Music/releases/download/1.2.26122.0/ChrisRLillo.Music_1.2.26122.0_AnyCPU.appxbundle",
       "SourceUrl": "https://github.com/RDCubing/ChrisRLillo-Music"
     },
+        {
+      "Title": "QuoteTileWP8",
+      "Subtitle": "Seek inspiration from quotes",
+      "Publisher":  "Andrew",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/qphone.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/qphone2.png",
+      "AccentColor": "#1f4e79",
+      "Version": "1.0.26123.0",
+      "Framework": "Windows Phone 8.1",
+      "Description": "QuoteTile is a simple app that shows inspiring quotes. Refresh quotes anytime you like. Save your favorites and build your personal collection.",
+      "DownloadUrl": "https://github.com/RDCubing/QuoteTileWP8/releases/download/1.0.26123.0/QuoteTileWP8_1.0.26123.0_AnyCPU.appx",
+      "SourceUrl": "https://github.com/RDCubing/QuoteTileWP8"
+    },
+
     {
       "Title": "ConverterCalculatorGUI",
       "Subtitle": "Scientific Calculator",
