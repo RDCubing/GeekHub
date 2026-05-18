@@ -7,10 +7,10 @@
       "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/q.png",
       "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/quote.png",
       "AccentColor": "#0D47A1",
-      "Version": "2.2.26136.0",
+      "Version": "2.2.26138.1",
       "Framework": "Windows 8.1",
       "Description": "QuoteTile is a simple app that shows inspiring quotes. Refresh quotes anytime, copy quotes to clipboard with one click, and share quotes anywhere.",
-      "DownloadUrl": "https://github.com/RDCubing/QuoteTileMain/releases/download/2.2.26136.0/QuoteTileMain_2.2.26136.0_AnyCPU.appx",
+      "DownloadUrl": "https://github.com/RDCubing/QuoteTileMain/releases/download/2.2.26138.1/QuoteTileMain_2.2.26138.1_AnyCPU.appx",
       "SourceUrl": "https://github.com/RDCubing/QuoteTileMain"
     },
     {
