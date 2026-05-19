@@ -187,19 +187,6 @@
       "Description": "Welcome to GeekHub, your central place for exploring projects, updates, and creative ideas all in one space. Here you can browse the latest builds, read fresh updates, and discover what's being worked on in real time. GeekHub is designed to keep everything organized and easy to access, so you can quickly jump between projects and stay up to date with new releases and features.",
       "DownloadUrl": "https://github.com/RDCubing/GeekHub/releases/download/1.1.26122.0/GeekHub_1.1.26122.0_AnyCPU.appxbundle",
       "SourceUrl": "https://github.com/RDCubing/GeekHub"
-    },
-    {
-      "Title": "DrayMusic",
-      "Subtitle": "Listen online, with DrayMusic",
-      "Publisher":  "DraydenYT",
-      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/draymusic.png",
-      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/draymusicfull.png",
-      "AccentColor": "#C12929",
-      "Version": "1.0.0.0",
-      "Framework": "Windows 8.1",
-      "Description": "Listen online anytime, anywhere with DrayMusic and enjoy seamless access to your favorite tracks, curated playlists, and new music discoveries all in one place.",
-        "DownloadUrl": "https://raw.githubusercontent.com/draydenthemiiyt-maker/10-Store/main/files/1773704616_DrayMusic_1.0.0.0_AnyCPU.appx",
-      "SourceUrl": null
     }
   ]
 }
