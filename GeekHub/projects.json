@@ -123,6 +123,19 @@
       "SourceUrl": "https://github.com/RDCubing/ChrisRLillo-Music"
     },
     {
+      "Title": "NeonEdge",
+      "Subtitle": "Edge, remade",
+      "Publisher": "GDC Projects by Andrew",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/neonedge.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/neonedge2.png",
+      "AccentColor": "#7a004b",
+      "Version": "1.0.26130.0",
+      "Framework": "Windows 10",
+      "Description": "NeonEdge is a lightweight browser remade in the style of the old Edge. It’s fast, simple, and built for a clean modern browsing experience while keeping that familiar classic feel.",
+      "DownloadUrl": "https://raw.githubusercontent.com/RDCubing/chrisrlillo-music-assets/main/programs/NeonEdge_1.0.26130.0_x86_x64_arm_arm64.msixbundle",
+      "SourceUrl": null
+    },
+    {
       "Title": "Neon Notes",
       "Subtitle": "Write and share!",
       "Publisher": "GDC Projects by Andrew",

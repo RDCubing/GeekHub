@@ -193,6 +193,7 @@
     <Content Include="Images\geekhub.png" />
     <Content Include="Images\glass.png" />
     <Content Include="Images\gdcwp.png" />
+    <Content Include="Images\neonedge2.png" />
     <Content Include="Images\neonnotes2.png" />
     <Content Include="Images\neonnotes.png" />
     <Content Include="Images\qphone.png" />
@@ -204,6 +205,7 @@
     <Content Include="Images\qphone2.png" />
     <Content Include="Images\quote.png" />
     <Content Include="Images\rlillo.png" />
+    <Content Include="Images\neonedge.png" />
     <Content Include="TextFile1.txt" />
   </ItemGroup>
   <ItemGroup>
