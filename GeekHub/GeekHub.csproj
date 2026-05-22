@@ -193,6 +193,8 @@
     <Content Include="Images\geekhub.png" />
     <Content Include="Images\glass.png" />
     <Content Include="Images\gdcwp.png" />
+    <Content Include="Images\neonnotes2.png" />
+    <Content Include="Images\neonnotes.png" />
     <Content Include="Images\qphone.png" />
     <Content Include="Images\ltswide.png" />
     <Content Include="Images\lts.png" />

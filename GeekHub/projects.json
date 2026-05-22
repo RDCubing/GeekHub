@@ -123,6 +123,19 @@
       "SourceUrl": "https://github.com/RDCubing/ChrisRLillo-Music"
     },
     {
+      "Title": "Neon Notes",
+      "Subtitle": "Write and share!",
+      "Publisher": "GDC Projects by Andrew",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/neonnotes.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/neonnotes2.png",
+      "AccentColor": "#2D4A6A",
+      "Version": "1.0.26142.0",
+      "Framework": "Windows 8.1",
+      "Description": "Neon Notes is a tile-based note-taking app inspired by the Windows 8 Start screen.",
+      "DownloadUrl": "https://github.com/RDCubing/Neon-Notes/releases/download/1.0.26142.0/Neon.Notes_1.0.26142.0_AnyCPU.appxbundle",
+      "SourceUrl": "https://github.com/RDCubing/Neon-Notes"
+    },
+    {
       "Title": "QuoteTileWP8",
       "Subtitle": "Seek inspiration from quotes",
       "Publisher": "Andrew",
