@@ -149,6 +149,45 @@
       "SourceUrl": "https://github.com/RDCubing/Neon-Notes"
     },
     {
+      "Title": "DrayMusic for Android",
+      "Subtitle": "The DraydenYT Music App!",
+      "Publisher": "DraydenYT",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/gradient.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/1774587909990.png",
+      "AccentColor": "#C12929",
+      "Version": "1.0",
+      "Framework": "Android",
+      "Description": "Listen online anytime, anywhere with DrayMusic and enjoy seamless access to your favorite tracks, curated playlists, and new music discoveries all in one place.",
+      "DownloadUrl": "https://github.com/draydenthemiiyt-maker/draymusic.github.io/raw/main/android/DrayMusic_1.0.apk",
+      "SourceUrl": "https://github.com/draydenthemiiyt-maker/draymusic.github.io/tree/main/android"
+    },
+    {
+      "Title": "Live Text 8.1",
+      "Subtitle": "Personalized live tiles",
+      "Publisher": "Live Text Team",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/image-5.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/image-4.png",
+      "AccentColor": "#C12929",
+      "Version": "1.0",
+      "Framework": "Android",
+      "Description": "Live Text is a Windows 10/8.1/8/Phone 8.1/8/7 that combines the best of live tiles and the Quotes/Texts, You can customize it like your way, pin the app to get the live tile, and you can write your own text instead of letting a quote take the place.",
+      "DownloadUrl": "https://github.com/bloomthebloom/LiveText/raw/main/Live%20Text%20-%20Windows%208.1_1.0.0.0_AnyCPU.appx",
+      "SourceUrl": null
+    },
+    {
+      "Title": "OctoStore",
+      "Subtitle": "Windows 8.1 Store, revived",
+      "Publisher": "Octo Limited",
+      "ImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/octostore.png",
+      "DetailImagePath": "https://raw.githubusercontent.com/RDCubing/GeekHub/master/GeekHub/Images/octoshot.png",
+      "AccentColor": "#8B0000",
+      "Version": "1.3.0.0",
+      "Framework": "Windows 8.1",
+      "Description": "OctoStore is a 8Store Fork that has some new features that makes it even better. It tries to continue the same goal 8Store had, with the same passions.",
+      "DownloadUrl": "https://raw.githubusercontent.com/andreatennis2024-hue/octostore-new-apps/main/update_1779525864249_1779546962100.appx",
+      "SourceUrl": null
+    },
+    {
       "Title": "QuoteTileWP8",
       "Subtitle": "Seek inspiration from quotes",
       "Publisher": "Andrew",

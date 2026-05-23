@@ -177,6 +177,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-180.png" />
     <Content Include="Assets\Wide310x150Logo.scale-80.png" />
     <Content Include="Audio\song04.mp3" />
+    <Content Include="Images\1774587909990.png" />
     <Content Include="Images\650x90.png" />
     <Content Include="Images\AeroQuotes_glass_ico.png" />
     <Content Include="Images\calc.png" />
@@ -193,6 +194,10 @@
     <Content Include="Images\geekhub.png" />
     <Content Include="Images\glass.png" />
     <Content Include="Images\gdcwp.png" />
+    <Content Include="Images\gradient.png" />
+    <Content Include="Images\image-4.png" />
+    <Content Include="Images\image-5.png" />
+    <Content Include="Images\octoshot.png" />
     <Content Include="Images\neonedge2.png" />
     <Content Include="Images\neonnotes2.png" />
     <Content Include="Images\neonnotes.png" />
@@ -206,6 +211,7 @@
     <Content Include="Images\quote.png" />
     <Content Include="Images\rlillo.png" />
     <Content Include="Images\neonedge.png" />
+    <Content Include="Images\octostore.png" />
     <Content Include="TextFile1.txt" />
   </ItemGroup>
   <ItemGroup>
